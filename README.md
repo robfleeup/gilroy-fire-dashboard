@@ -1,31 +1,25 @@
-# Gilroy Fire Operations — Version 1.1
+# Gilroy Fire Operations — Version 1.2
 
-Version 1.1 improves the public-facing design and fire-department terminology.
+This design iteration adds two focused sections without allowing wildfire information to dominate the dashboard.
 
-## Primary section language
+## Added
 
-### Department Activity
-- Emergency Incidents YTD
-- Incidents This Month
-- Incidents Today
-- Average Incidents Per Day
-- EMS Incidents
-- Apparatus Responses
+### Seasonal Awareness
+- Local Vegetation Fires
+- Watch Duty public map link
+- Fire Weather
+- Gilroy Resources Deployed
+- Smoke & Air Quality
 
-### Current Operational Picture
-- Active Emergency Incidents
-- Today's Emergency Incidents
-- Medical Calls Today
-- Fire & Rescue Calls Today
-- Gilroy Fire Units Assigned
-- Command Officers Assigned
-- ALS Ambulances Assigned
-- BLS Ambulances Assigned
+### Historical Response Activity
+- 2024 clearly identified as a partial reporting year
+- 2025 identified as the full-year baseline
+- 2026 identified as year to date
+- Planned same-period year-over-year comparison
 
-### Department Readiness
-- Fire Engines
-- Truck Company
-- Rescue Medic
-- Battalion Chief
+## Data-source language
+- Operational statistics: First Due RMS
+- Current public incident information: public incident feed
+- Local wildfire awareness: Watch Duty link and future verified sources
 
-No live data or historical data is connected in this version.
+No live values have been connected in this version.

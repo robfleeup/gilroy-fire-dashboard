@@ -14,7 +14,7 @@ def health():
         {
             "status": "ok",
             "application": "Gilroy Fire Operations",
-            "version": "1.1-visual",
+            "version": "1.2-seasonal-history",
         }
     )
 
