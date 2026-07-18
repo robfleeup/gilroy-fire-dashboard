@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Gilroy Fire Operations dashboard">
+  <meta name="description" content="Gilroy Fire Department public operations dashboard">
   <title>Gilroy Fire Operations</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
@@ -29,121 +29,113 @@
       </div>
       <div class="system-status">
         <span class="status-dot"></span>
-        Dashboard Online
+        Operations Dashboard
       </div>
     </nav>
 
     <div class="hero-content">
-      <p class="eyebrow">Public Operations Dashboard</p>
-      <h1>Gilroy Fire Operations</h1>
-      <p class="subtitle">Operations • Resource Utilization • Community Information</p>
+      <p class="eyebrow">Serving Gilroy Around the Clock</p>
+      <h1>Gilroy Fire<br>Operations</h1>
+      <p class="subtitle">Emergency response, resource activity, and community readiness</p>
       <div class="hero-rule"></div>
-      <p class="hero-message">A clear view of department activity, readiness, and service to the community.</p>
+      <p class="hero-message">A public view of the emergency incidents and fire department resources serving the Gilroy community.</p>
     </div>
 
     <div class="slide-dots" aria-label="Hero image controls">
-      <button class="slide-dot is-active" aria-label="Show image 1"></button>
-      <button class="slide-dot" aria-label="Show image 2"></button>
-      <button class="slide-dot" aria-label="Show image 3"></button>
-      <button class="slide-dot" aria-label="Show image 4"></button>
-      <button class="slide-dot" aria-label="Show image 5"></button>
-      <button class="slide-dot" aria-label="Show image 6"></button>
+      <button class="slide-dot is-active" type="button" aria-label="Show image 1"></button>
+      <button class="slide-dot" type="button" aria-label="Show image 2"></button>
+      <button class="slide-dot" type="button" aria-label="Show image 3"></button>
+      <button class="slide-dot" type="button" aria-label="Show image 4"></button>
+      <button class="slide-dot" type="button" aria-label="Show image 5"></button>
+      <button class="slide-dot" type="button" aria-label="Show image 6"></button>
     </div>
   </header>
 
   <main>
-    <section class="intro">
+    <section class="overview-banner">
       <div>
-        <p class="section-kicker">Department Overview</p>
-        <h2>2026 Operations</h2>
+        <p class="section-kicker">Department Activity</p>
+        <h2>2026 Emergency Response</h2>
       </div>
-      <p class="section-note">
-        Version 1 establishes the approved visual foundation. Data connections will be added only after each source is separately verified.
-      </p>
+      <div class="reporting-status">
+        <span class="status-dot"></span>
+        <div>
+          <strong>Dashboard foundation active</strong>
+          <small>Operational data will be added one verified source at a time.</small>
+        </div>
+      </div>
     </section>
 
-    <section class="kpi-grid" aria-label="2026 operations metrics">
-      <article class="kpi-card">
-        <span>2026 Incidents YTD</span>
-        <strong>—</strong>
-        <small>Department data not connected</small>
-      </article>
-      <article class="kpi-card">
-        <span>Incidents This Month</span>
-        <strong>—</strong>
-        <small>Department data not connected</small>
-      </article>
-      <article class="kpi-card live-card">
-        <span>Incidents Today</span>
-        <strong>—</strong>
-        <small>Live public feed not connected</small>
-      </article>
-      <article class="kpi-card">
-        <span>Average Daily Incidents</span>
-        <strong>—</strong>
-        <small>Department data not connected</small>
-      </article>
-      <article class="kpi-card">
-        <span>EMS Share</span>
-        <strong>—</strong>
-        <small>Department data not connected</small>
-      </article>
-      <article class="kpi-card">
-        <span>Unit Responses</span>
-        <strong>—</strong>
-        <small>Verified unit data required</small>
-      </article>
+    <section class="kpi-grid" aria-label="2026 emergency response activity">
+      <article class="kpi-card"><div class="kpi-icon">01</div><span>Emergency Incidents YTD</span><strong>—</strong><small>Total incidents since January 1</small></article>
+      <article class="kpi-card"><div class="kpi-icon">02</div><span>Incidents This Month</span><strong>—</strong><small>Emergency incidents during the current month</small></article>
+      <article class="kpi-card live-card"><div class="kpi-icon">LIVE</div><span>Incidents Today</span><strong>—</strong><small>Emergency incidents reported today</small></article>
+      <article class="kpi-card"><div class="kpi-icon">04</div><span>Average Incidents Per Day</span><strong>—</strong><small>Average daily emergency workload</small></article>
+      <article class="kpi-card"><div class="kpi-icon">05</div><span>EMS Incidents</span><strong>—</strong><small>Share of incidents involving medical care</small></article>
+      <article class="kpi-card"><div class="kpi-icon">06</div><span>Apparatus Responses</span><strong>—</strong><small>Total responses by Gilroy Fire units</small></article>
     </section>
 
     <section class="dashboard-grid">
       <article class="panel current-operations">
         <div class="panel-heading">
           <div>
-            <p class="section-kicker">Current Operations</p>
+            <p class="section-kicker">Current Operational Picture</p>
             <h2>What is happening in Gilroy Fire right now?</h2>
+            <p class="panel-intro">A current view of emergency activity and the resources assigned to incidents.</p>
           </div>
-          <span class="source-badge">Layout Preview</span>
+          <span class="source-badge">Live Data Coming Next</span>
         </div>
 
         <div class="operations-grid">
-          <div class="operation-tile featured"><strong>—</strong><span>Active incidents</span></div>
-          <div class="operation-tile"><strong>—</strong><span>Incidents today</span></div>
-          <div class="operation-tile"><strong>—</strong><span>EMS today</span></div>
-          <div class="operation-tile"><strong>—</strong><span>Fire &amp; other today</span></div>
-          <div class="operation-tile"><strong>—</strong><span>Gilroy units committed</span></div>
-          <div class="operation-tile"><strong>—</strong><span>Chief officers committed</span></div>
-          <div class="operation-tile"><strong>—</strong><span>ALS ambulances assigned</span></div>
-          <div class="operation-tile"><strong>—</strong><span>BLS ambulances assigned</span></div>
+          <div class="operation-tile featured"><div class="tile-indicator"></div><strong>—</strong><span>Active Emergency Incidents</span><small>Incidents currently in progress</small></div>
+          <div class="operation-tile"><strong>—</strong><span>Today's Emergency Incidents</span><small>Total incidents since midnight</small></div>
+          <div class="operation-tile"><strong>—</strong><span>Medical Calls Today</span><small>Incidents involving emergency medical care</small></div>
+          <div class="operation-tile"><strong>—</strong><span>Fire &amp; Rescue Calls Today</span><small>Fire, rescue, hazard, and other responses</small></div>
+          <div class="operation-tile"><strong>—</strong><span>Gilroy Fire Units Assigned</span><small>Department apparatus committed to incidents</small></div>
+          <div class="operation-tile"><strong>—</strong><span>Command Officers Assigned</span><small>Battalion Chiefs managing active incidents</small></div>
+          <div class="operation-tile"><strong>—</strong><span>ALS Ambulances Assigned</span><small>Advanced life support ambulances listed</small></div>
+          <div class="operation-tile"><strong>—</strong><span>BLS Ambulances Assigned</span><small>Basic life support ambulances listed</small></div>
         </div>
 
         <div class="panel-footer">
-          <p>No live values are shown until the source and each calculation have been verified.</p>
-          <span>Version 1 • Static foundation</span>
+          <p>Only verified public incident information will appear in this section.</p>
+          <span>Automatic updates planned</span>
         </div>
       </article>
 
-      <aside class="panel source-panel">
-        <p class="section-kicker">System Status</p>
-        <h2>Clean starting point</h2>
-        <div class="status-list">
-          <div><span class="check">✓</span><p><strong>GitHub-ready structure</strong><small>One application, one stylesheet, and one script.</small></p></div>
-          <div><span class="check">✓</span><p><strong>Render health check</strong><small>The <code>/health</code> route confirms the correct deployment.</small></p></div>
-          <div><span class="pending">2</span><p><strong>Next: source test</strong><small>Verify OurGilroy from Render before displaying a live value.</small></p></div>
-          <div><span class="pending">3</span><p><strong>Then: one live tile</strong><small>Add Incidents Today and compare it directly with the source.</small></p></div>
+      <aside class="panel readiness-panel">
+        <div class="readiness-header">
+          <p class="section-kicker">Department Readiness</p>
+          <h2>Resources serving the community</h2>
+          <p>Future live status of primary Gilroy Fire response resources.</p>
+        </div>
+
+        <div class="readiness-list">
+          <div class="readiness-row"><span class="resource-mark">E</span><div><strong>Fire Engines</strong><small>Emergency response and fire suppression</small></div><b>—</b></div>
+          <div class="readiness-row"><span class="resource-mark">T</span><div><strong>Truck Company</strong><small>Aerial, rescue, and specialized operations</small></div><b>—</b></div>
+          <div class="readiness-row"><span class="resource-mark">M</span><div><strong>Rescue Medic</strong><small>Advanced medical response capability</small></div><b>—</b></div>
+          <div class="readiness-row"><span class="resource-mark">BC</span><div><strong>Battalion Chief</strong><small>Incident command and operational oversight</small></div><b>—</b></div>
+        </div>
+
+        <div class="readiness-note">
+          <strong>Why this matters</strong>
+          <p>Resource status helps explain how the department is meeting simultaneous calls and maintaining citywide coverage.</p>
         </div>
       </aside>
     </section>
 
-    <section class="panel future-panel">
-      <div>
-        <p class="section-kicker">Planned Sections</p>
-        <h2>Built carefully, one verified layer at a time</h2>
+    <section class="panel information-panel">
+      <div class="information-heading">
+        <p class="section-kicker">Dashboard Information</p>
+        <h2>A complete view of emergency service</h2>
+        <p>Each section will use a clearly identified and verified source so the public can distinguish live incident activity from official department reporting.</p>
       </div>
-      <div class="future-grid">
-        <div><strong>Live Activity</strong><span>Current and recent public incidents</span></div>
-        <div><strong>Department Performance</strong><span>Verified 2026 historical metrics</span></div>
-        <div><strong>Resource Workload</strong><span>True Gilroy unit responses</span></div>
-        <div><strong>Operations Highlights</strong><span>Stations, services, and community impact</span></div>
+
+      <div class="information-grid">
+        <article><span class="section-number">01</span><strong>Current Incidents</strong><p>Active and recent incidents from the public incident feed.</p></article>
+        <article><span class="section-number">02</span><strong>Response Activity</strong><p>Official annual and monthly emergency incident totals.</p></article>
+        <article><span class="section-number">03</span><strong>Resource Workload</strong><p>Responses completed by engines, truck, rescue medic, and command officers.</p></article>
+        <article><span class="section-number">04</span><strong>Community Readiness</strong><p>Stations, staffing, programs, and operational capabilities serving Gilroy.</p></article>
       </div>
     </section>
   </main>
@@ -151,9 +143,9 @@
   <footer>
     <div class="brand-lockup footer-brand">
       <img src="{{ url_for('static', filename='images/gilroy-fire-logo.jfif') }}" alt="">
-      <div><strong>Gilroy Fire Department</strong><span>Service • Readiness • Community</span></div>
+      <div><strong>Gilroy Fire Department</strong><span>Prepared to respond. Committed to serve.</span></div>
     </div>
-    <p>Version 1 — Static design and deployment validation only.</p>
+    <div class="footer-copy"><strong>Gilroy Fire Operations</strong><span>Public information dashboard</span></div>
   </footer>
 
   <script src="{{ url_for('static', filename='js/app.js') }}"></script>

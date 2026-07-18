@@ -1,38 +1,31 @@
-# Gilroy Fire Operations — Version 1
+# Gilroy Fire Operations — Version 1.1
 
-Version 1 is a clean, static rebuild.
+Version 1.1 improves the public-facing design and fire-department terminology.
 
-## Included
+## Primary section language
 
-- Gilroy Fire branding and logo
-- Rotating department hero photographs
-- Six empty KPI tiles
-- Current Operations layout
-- Mobile-responsive design
-- `/health` deployment verification route
-- No database
-- No OurGilroy connection
-- No historical CSV calculations
-- No inherited application code
+### Department Activity
+- Emergency Incidents YTD
+- Incidents This Month
+- Incidents Today
+- Average Incidents Per Day
+- EMS Incidents
+- Apparatus Responses
 
-## Render setup
+### Current Operational Picture
+- Active Emergency Incidents
+- Today's Emergency Incidents
+- Medical Calls Today
+- Fire & Rescue Calls Today
+- Gilroy Fire Units Assigned
+- Command Officers Assigned
+- ALS Ambulances Assigned
+- BLS Ambulances Assigned
 
-Build command:
+### Department Readiness
+- Fire Engines
+- Truck Company
+- Rescue Medic
+- Battalion Chief
 
-```bash
-pip install -r requirements.txt
-```
-
-Start command:
-
-```bash
-gunicorn app:app
-```
-
-Health check:
-
-```text
-/health
-```
-
-Do not connect live data until this design is deployed and approved.
+No live data or historical data is connected in this version.
