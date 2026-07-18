@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Gilroy Fire Department public operations dashboard">
   <title>Gilroy Fire Operations</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" href="static/css/styles.css">
 </head>
 <body>
   <header class="hero" aria-label="Gilroy Fire Operations">
     <div class="hero-slides" aria-hidden="true">
-      <div class="hero-slide is-active" style="background-image:url('{{ url_for('static', filename='images/hero-01.jpeg') }}')"></div>
-      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-02.jpeg') }}')"></div>
-      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-03.jpg') }}')"></div>
-      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-04.jpg') }}')"></div>
-      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-05.jpg') }}')"></div>
-      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-06.jpg') }}')"></div>
+      <div class="hero-slide is-active" style="background-image:url('static/images/hero-01.jpeg')"></div>
+      <div class="hero-slide" style="background-image:url('static/images/hero-02.jpeg')"></div>
+      <div class="hero-slide" style="background-image:url('static/images/hero-03.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('static/images/hero-04.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('static/images/hero-05.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('static/images/hero-06.jpg')"></div>
     </div>
     <div class="hero-shade"></div>
 
     <nav class="topbar">
       <div class="brand-lockup">
-        <img src="{{ url_for('static', filename='images/gilroy-fire-logo.jfif') }}" alt="Gilroy Fire Department logo">
+        <img src="static/images/gilroy-fire-logo.jfif" alt="Gilroy Fire Department logo">
         <div>
           <span>City of Gilroy</span>
           <strong>Fire Department</strong>
@@ -52,18 +52,6 @@
   </header>
 
   <main>
-
-<section class="panel">
-<div class="stats-strip">
-<div class="quick-stat"><span>Population Protected</span><strong>~60,000</strong></div>
-<div class="quick-stat"><span>Stations</span><strong>3</strong></div>
-<div class="quick-stat"><span>Frontline Engines</span><strong>4</strong></div>
-<div class="quick-stat"><span>ALS First Response</span><strong>Citywide</strong></div>
-<div class="quick-stat"><span>2025 Incidents</span><strong>7,014</strong></div>
-<div class="quick-stat"><span>Average Daily</span><strong>19.2</strong></div>
-</div>
-</section>
-
     <section class="overview-banner">
       <div>
         <p class="section-kicker">Department Activity</p>
@@ -149,7 +137,7 @@
       <article class="panel current-operations">
         <div class="panel-heading">
           <div>
-            <p class="section-kicker">Current Operations</p>
+            <p class="section-kicker">Current Operational Picture</p>
             <h2>What is happening in Gilroy Fire right now?</h2>
             <p class="panel-intro">A current view of emergency activity and the resources assigned to incidents.</p>
           </div>
@@ -175,7 +163,7 @@
 
       <aside class="panel readiness-panel">
         <div class="readiness-header">
-          <p class="section-kicker">Resources</p>
+          <p class="section-kicker">Department Readiness</p>
           <h2>Resources serving the community</h2>
           <p>Future live status of primary Gilroy Fire response resources.</p>
         </div>
@@ -198,7 +186,7 @@
     <section class="panel history-panel" aria-labelledby="history-title">
       <div class="history-heading">
         <div>
-          <p class="section-kicker">Response Trends</p>
+          <p class="section-kicker">Historical Response Activity</p>
           <h2 id="history-title">How emergency demand is changing</h2>
           <p>
             Year-to-year information will be compared only where the reporting periods and data sources support a fair comparison.
@@ -247,7 +235,7 @@
 
     <section class="panel information-panel">
       <div class="information-heading">
-        <p class="section-kicker">About This Dashboard</p>
+        <p class="section-kicker">Dashboard Information</p>
         <h2>A complete view of emergency service</h2>
         <p>Each section will use a clearly identified and verified source so the public can distinguish live incident activity from official department reporting.</p>
       </div>
@@ -263,12 +251,12 @@
 
   <footer>
     <div class="brand-lockup footer-brand">
-      <img src="{{ url_for('static', filename='images/gilroy-fire-logo.jfif') }}" alt="">
+      <img src="static/images/gilroy-fire-logo.jfif" alt="">
       <div><strong>Gilroy Fire Department</strong><span>Prepared to respond. Committed to serve.</span></div>
     </div>
     <div class="footer-copy"><strong>Gilroy Fire Operations</strong><span>Public information dashboard</span></div>
   </footer>
 
-  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script src="static/js/app.js"></script>
 </body>
 </html>

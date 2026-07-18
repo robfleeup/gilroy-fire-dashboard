@@ -263,3 +263,10 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:22px;pa
   .seasonal-grid{grid-template-columns:1fr}
   .seasonal-note{flex-direction:column;gap:8px}
 }
+
+.stats-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:18px 0}
+.quick-stat{background:#f7f9fb;border:1px solid #dfe5ea;border-radius:14px;padding:16px}
+.quick-stat span{display:block;font-size:10px;text-transform:uppercase;color:#6b7680;font-weight:700;letter-spacing:.08em}
+.quick-stat strong{display:block;margin-top:8px;font-size:28px;color:#102b46}
+@media(max-width:1000px){.stats-strip{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:650px){.stats-strip{grid-template-columns:repeat(2,1fr)}}

@@ -1,25 +1,18 @@
-# Gilroy Fire Operations — Version 1.2
+Version 1.3 - Data Population
 
-This design iteration adds two focused sections without allowing wildfire information to dominate the dashboard.
+Changes:
+- Removed computer image reference from hero rotation/template where present.
+- Simplified section titles:
+  * Current Operations
+  * Resources
+  * Response Trends
+  * About This Dashboard
+- Added quick department statistics strip:
+  * Population ~60,000
+  * 3 Stations
+  * 4 Frontline Engines
+  * Citywide ALS First Response
+  * 7,014 incidents (2025)
+  * 19.2 average incidents/day
 
-## Added
-
-### Seasonal Awareness
-- Local Vegetation Fires
-- Watch Duty public map link
-- Fire Weather
-- Gilroy Resources Deployed
-- Smoke & Air Quality
-
-### Historical Response Activity
-- 2024 clearly identified as a partial reporting year
-- 2025 identified as the full-year baseline
-- 2026 identified as year to date
-- Planned same-period year-over-year comparison
-
-## Data-source language
-- Operational statistics: First Due RMS
-- Current public incident information: public incident feed
-- Local wildfire awareness: Watch Duty link and future verified sources
-
-No live values have been connected in this version.
+Next version will connect live PulsePoint and First Due data instead of static values.
