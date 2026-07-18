@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gilroy Fire Operations dashboard">
+  <title>Gilroy Fire Operations</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <header class="hero" aria-label="Gilroy Fire Operations">
+    <div class="hero-slides" aria-hidden="true">
+      <div class="hero-slide is-active" style="background-image:url('{{ url_for('static', filename='images/hero-01.jpeg') }}')"></div>
+      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-02.jpeg') }}')"></div>
+      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-03.jpg') }}')"></div>
+      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-04.jpg') }}')"></div>
+      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-05.jpg') }}')"></div>
+      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-06.jpg') }}')"></div>
+    </div>
+    <div class="hero-shade"></div>
+
+    <nav class="topbar">
+      <div class="brand-lockup">
+        <img src="{{ url_for('static', filename='images/gilroy-fire-logo.jfif') }}" alt="Gilroy Fire Department logo">
+        <div>
+          <span>City of Gilroy</span>
+          <strong>Fire Department</strong>
+        </div>
+      </div>
+      <div class="system-status">
+        <span class="status-dot"></span>
+        Dashboard Online
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">Public Operations Dashboard</p>
+      <h1>Gilroy Fire Operations</h1>
+      <p class="subtitle">Operations • Resource Utilization • Community Information</p>
+      <div class="hero-rule"></div>
+      <p class="hero-message">A clear view of department activity, readiness, and service to the community.</p>
+    </div>
+
+    <div class="slide-dots" aria-label="Hero image controls">
+      <button class="slide-dot is-active" aria-label="Show image 1"></button>
+      <button class="slide-dot" aria-label="Show image 2"></button>
+      <button class="slide-dot" aria-label="Show image 3"></button>
+      <button class="slide-dot" aria-label="Show image 4"></button>
+      <button class="slide-dot" aria-label="Show image 5"></button>
+      <button class="slide-dot" aria-label="Show image 6"></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <p class="section-kicker">Department Overview</p>
+        <h2>2026 Operations</h2>
+      </div>
+      <p class="section-note">
+        Version 1 establishes the approved visual foundation. Data connections will be added only after each source is separately verified.
+      </p>
+    </section>
+
+    <section class="kpi-grid" aria-label="2026 operations metrics">
+      <article class="kpi-card">
+        <span>2026 Incidents YTD</span>
+        <strong>—</strong>
+        <small>Department data not connected</small>
+      </article>
+      <article class="kpi-card">
+        <span>Incidents This Month</span>
+        <strong>—</strong>
+        <small>Department data not connected</small>
+      </article>
+      <article class="kpi-card live-card">
+        <span>Incidents Today</span>
+        <strong>—</strong>
+        <small>Live public feed not connected</small>
+      </article>
+      <article class="kpi-card">
+        <span>Average Daily Incidents</span>
+        <strong>—</strong>
+        <small>Department data not connected</small>
+      </article>
+      <article class="kpi-card">
+        <span>EMS Share</span>
+        <strong>—</strong>
+        <small>Department data not connected</small>
+      </article>
+      <article class="kpi-card">
+        <span>Unit Responses</span>
+        <strong>—</strong>
+        <small>Verified unit data required</small>
+      </article>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="panel current-operations">
+        <div class="panel-heading">
+          <div>
+            <p class="section-kicker">Current Operations</p>
+            <h2>What is happening in Gilroy Fire right now?</h2>
+          </div>
+          <span class="source-badge">Layout Preview</span>
+        </div>
+
+        <div class="operations-grid">
+          <div class="operation-tile featured"><strong>—</strong><span>Active incidents</span></div>
+          <div class="operation-tile"><strong>—</strong><span>Incidents today</span></div>
+          <div class="operation-tile"><strong>—</strong><span>EMS today</span></div>
+          <div class="operation-tile"><strong>—</strong><span>Fire &amp; other today</span></div>
+          <div class="operation-tile"><strong>—</strong><span>Gilroy units committed</span></div>
+          <div class="operation-tile"><strong>—</strong><span>Chief officers committed</span></div>
+          <div class="operation-tile"><strong>—</strong><span>ALS ambulances assigned</span></div>
+          <div class="operation-tile"><strong>—</strong><span>BLS ambulances assigned</span></div>
+        </div>
+
+        <div class="panel-footer">
+          <p>No live values are shown until the source and each calculation have been verified.</p>
+          <span>Version 1 • Static foundation</span>
+        </div>
+      </article>
+
+      <aside class="panel source-panel">
+        <p class="section-kicker">System Status</p>
+        <h2>Clean starting point</h2>
+        <div class="status-list">
+          <div><span class="check">✓</span><p><strong>GitHub-ready structure</strong><small>One application, one stylesheet, and one script.</small></p></div>
+          <div><span class="check">✓</span><p><strong>Render health check</strong><small>The <code>/health</code> route confirms the correct deployment.</small></p></div>
+          <div><span class="pending">2</span><p><strong>Next: source test</strong><small>Verify OurGilroy from Render before displaying a live value.</small></p></div>
+          <div><span class="pending">3</span><p><strong>Then: one live tile</strong><small>Add Incidents Today and compare it directly with the source.</small></p></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="panel future-panel">
+      <div>
+        <p class="section-kicker">Planned Sections</p>
+        <h2>Built carefully, one verified layer at a time</h2>
+      </div>
+      <div class="future-grid">
+        <div><strong>Live Activity</strong><span>Current and recent public incidents</span></div>
+        <div><strong>Department Performance</strong><span>Verified 2026 historical metrics</span></div>
+        <div><strong>Resource Workload</strong><span>True Gilroy unit responses</span></div>
+        <div><strong>Operations Highlights</strong><span>Stations, services, and community impact</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand-lockup footer-brand">
+      <img src="{{ url_for('static', filename='images/gilroy-fire-logo.jfif') }}" alt="">
+      <div><strong>Gilroy Fire Department</strong><span>Service • Readiness • Community</span></div>
+    </div>
+    <p>Version 1 — Static design and deployment validation only.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
