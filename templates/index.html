@@ -101,40 +101,31 @@
 
       <div class="seasonal-grid">
         <article class="seasonal-card local-fire-card">
-          <div class="seasonal-label">
-            <span class="seasonal-symbol">WF</span>
-            <span>Local Vegetation Fires</span>
-          </div>
-          <strong>No major local incident shown</strong>
-          <small>Public wildfire mapping and incident updates</small>
-          <a href="https://app.watchduty.org/" target="_blank" rel="noopener noreferrer">View Watch Duty Map <span aria-hidden="true">↗</span></a>
+          <div class="seasonal-label"><span class="seasonal-symbol">WF</span><span>Gilroy Vegetation Fires</span></div>
+          <strong id="veg-count">18 incidents in 15 days</strong>
+          <small id="veg-detail">First Due activity through July 18, 2026</small>
+          <a href="https://app.watchduty.org/" target="_blank" rel="noopener noreferrer">Open Watch Duty Live Map <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="seasonal-card deployment-card">
+          <div class="seasonal-label"><span class="seasonal-symbol">OES</span><span>GFD Mutual-Aid Deployment</span></div>
+          <strong>OES Engine 2614 — Deployed</strong>
+          <small>Oregon interstate wildfire support • deployed July 17, 2026 • incident assignment pending</small>
+          <span class="card-status deployed">Local stations remain staffed</span>
         </article>
 
         <article class="seasonal-card">
-          <div class="seasonal-label">
-            <span class="seasonal-symbol">WX</span>
-            <span>Fire Weather</span>
-          </div>
-          <strong>Conditions coming soon</strong>
-          <small>Wind, humidity, heat, and Red Flag information</small>
+          <div class="seasonal-label"><span class="seasonal-symbol">WX</span><span>Gilroy Fire Weather</span></div>
+          <strong id="weather-summary">Loading current conditions…</strong>
+          <small id="weather-detail">Temperature, humidity, wind, and active NWS alerts</small>
+          <a href="https://www.weather.gov/" target="_blank" rel="noopener noreferrer">National Weather Service <span aria-hidden="true">↗</span></a>
         </article>
 
         <article class="seasonal-card">
-          <div class="seasonal-label">
-            <span class="seasonal-symbol">OES</span>
-            <span>Gilroy Resources Deployed</span>
-          </div>
-          <strong>Deployment status coming soon</strong>
-          <small>Resources assigned to regional or statewide incidents</small>
-        </article>
-
-        <article class="seasonal-card">
-          <div class="seasonal-label">
-            <span class="seasonal-symbol">AQ</span>
-            <span>Smoke &amp; Air Quality</span>
-          </div>
-          <strong>Air-quality status coming soon</strong>
-          <small>Regional smoke conditions that may affect Gilroy</small>
+          <div class="seasonal-label"><span class="seasonal-symbol">AQ</span><span>Smoke &amp; Air Quality</span></div>
+          <strong>Check current smoke impacts</strong>
+          <small>Wildfire smoke can affect Gilroy even when the fire is hundreds of miles away.</small>
+          <a href="https://ww2.arb.ca.gov/smokereadyca" target="_blank" rel="noopener noreferrer">Smoke Ready California <span aria-hidden="true">↗</span></a>
         </article>
       </div>
 
@@ -155,23 +146,23 @@
             <h2>What is happening in Gilroy Fire right now?</h2>
             <p class="panel-intro">A current view of emergency activity and the resources assigned to incidents.</p>
           </div>
-          <span class="source-badge">Live Data Coming Next</span>
+          <span class="source-badge">Live via OurGilroy / PulsePoint</span>
         </div>
 
         <div class="operations-grid">
-          <div class="operation-tile featured"><div class="tile-indicator"></div><strong>—</strong><span>Active Emergency Incidents</span><small>Incidents currently in progress</small></div>
-          <div class="operation-tile"><strong>—</strong><span>Today's Emergency Incidents</span><small>Total incidents since midnight</small></div>
-          <div class="operation-tile"><strong>—</strong><span>Medical Calls Today</span><small>Incidents involving emergency medical care</small></div>
-          <div class="operation-tile"><strong>—</strong><span>Fire &amp; Rescue Calls Today</span><small>Fire, rescue, hazard, and other responses</small></div>
-          <div class="operation-tile"><strong>—</strong><span>Gilroy Fire Units Assigned</span><small>Department apparatus committed to incidents</small></div>
-          <div class="operation-tile"><strong>—</strong><span>Command Officers Assigned</span><small>Battalion Chiefs managing active incidents</small></div>
-          <div class="operation-tile"><strong>—</strong><span>ALS Ambulances Assigned</span><small>Advanced life support ambulances listed</small></div>
-          <div class="operation-tile"><strong>—</strong><span>BLS Ambulances Assigned</span><small>Basic life support ambulances listed</small></div>
+          <div class="operation-tile featured"><div class="tile-indicator"></div><strong id="active-incidents">—</strong><span>Active Emergency Incidents</span><small>Incidents currently in progress</small></div>
+          <div class="operation-tile"><strong id="incidents-today">—</strong><span>Today's Emergency Incidents</span><small>Total incidents since midnight</small></div>
+          <div class="operation-tile"><strong id="ems-today">—</strong><span>Medical Calls Today</span><small>Incidents involving emergency medical care</small></div>
+          <div class="operation-tile"><strong id="fire-today">—</strong><span>Fire &amp; Rescue Calls Today</span><small>Fire, rescue, hazard, and other responses</small></div>
+          <div class="operation-tile"><strong id="units-assigned">—</strong><span>Gilroy Fire Units Assigned</span><small>Department apparatus committed to incidents</small></div>
+          <div class="operation-tile"><strong id="chiefs-assigned">—</strong><span>Command Officers Assigned</span><small>Battalion Chiefs managing active incidents</small></div>
+          <div class="operation-tile"><strong id="als-assigned">—</strong><span>ALS Ambulances Assigned</span><small>Advanced life support ambulances listed</small></div>
+          <div class="operation-tile"><strong id="bls-assigned">—</strong><span>BLS Ambulances Assigned</span><small>Basic life support ambulances listed</small></div>
         </div>
 
         <div class="panel-footer">
           <p>Only verified public incident information will appear in this section.</p>
-          <span>Automatic updates planned</span>
+          <span><span id="live-update-status">Connecting to public incident feed…</span></span>
         </div>
       </article>
 

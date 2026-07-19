@@ -270,3 +270,5 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:22px;pa
 .quick-stat strong{display:block;margin-top:8px;font-size:28px;color:#102b46}
 @media(max-width:1000px){.stats-strip{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:650px){.stats-strip{grid-template-columns:repeat(2,1fr)}}
+
+.card-status{display:inline-flex;margin-top:12px;padding:7px 10px;border-radius:999px;font-size:.75rem;font-weight:800;letter-spacing:.02em}.card-status.deployed{background:#fff3cd;color:#795800}.deployment-card{border-left:4px solid #d59b00}.seasonal-card a{display:inline-block;margin-top:12px;font-weight:800;text-decoration:none}.seasonal-card a:hover{text-decoration:underline}

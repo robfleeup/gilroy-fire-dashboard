@@ -5,22 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Gilroy Fire Department public operations dashboard">
   <title>Gilroy Fire Operations</title>
-  <link rel="stylesheet" href="static/css/styles.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
   <header class="hero" aria-label="Gilroy Fire Operations">
     <div class="hero-slides" aria-hidden="true">
-      <div class="hero-slide is-active" style="background-image:url('static/images/hero-02.jpeg')"></div>
-      <div class="hero-slide" style="background-image:url('static/images/hero-03.jpg')"></div>
-      <div class="hero-slide" style="background-image:url('static/images/hero-04.jpg')"></div>
-      <div class="hero-slide" style="background-image:url('static/images/hero-05.jpg')"></div>
-      <div class="hero-slide" style="background-image:url('static/images/hero-06.jpg')"></div>
+      <div class="hero-slide is-active" style="background-image:url('{{ url_for('static', filename='images/hero-01.jpg') }}')"></div>
+      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-02.jpg') }}')"></div>
+      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-03.jpg') }}')"></div>
+      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-04.jpg') }}')"></div>
+      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-05.jpg') }}')"></div>
+      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-06.jpg') }}')"></div>
+      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-07.jpg') }}')"></div>
     </div>
     <div class="hero-shade"></div>
 
     <nav class="topbar">
       <div class="brand-lockup">
-        <img src="static/images/gilroy-fire-logo.jfif" alt="Gilroy Fire Department logo">
+        <img src="{{ url_for('static', filename='images/gilroy-fire-logo.jfif') }}" alt="Gilroy Fire Department logo">
         <div>
           <span>City of Gilroy</span>
           <strong>Fire Department</strong>
@@ -46,31 +48,45 @@
       <button class="slide-dot" type="button" aria-label="Show image 3"></button>
       <button class="slide-dot" type="button" aria-label="Show image 4"></button>
       <button class="slide-dot" type="button" aria-label="Show image 5"></button>
+      <button class="slide-dot" type="button" aria-label="Show image 6"></button>
+      <button class="slide-dot" type="button" aria-label="Show image 7"></button>
     </div>
   </header>
 
   <main>
-    <section class="overview-banner">
+
+    <section class="panel">
+      <div class="stats-strip">
+        <div class="quick-stat"><span>Population Protected</span><strong>~60,000</strong></div>
+        <div class="quick-stat"><span>Service Area</span><strong>~16 sq. mi.</strong></div>
+        <div class="quick-stat"><span>Fire Stations</span><strong>3</strong></div>
+        <div class="quick-stat"><span>Engine Companies</span><strong>3 Frontline</strong></div>
+        <div class="quick-stat"><span>Truck Company</span><strong>Cross-Staffed</strong></div>
+        <div class="quick-stat"><span>ALS First Response</span><strong>Citywide</strong></div>
+      </div>
+    </section>
+
+<section class="overview-banner">
       <div>
         <p class="section-kicker">Department Activity</p>
-        <h2>2025 Emergency Response</h2>
+        <h2>2026 Emergency Response <small class="data-through">Through July 15</small></h2>
       </div>
       <div class="reporting-status">
         <span class="status-dot"></span>
         <div>
-          <strong>Verified annual activity</strong>
-          <small>Official 2025 reporting from First Due RMS.</small>
+          <strong>First Due incident data loaded</strong>
+          <small>3,494 incidents through July 15, 2026.</small>
         </div>
       </div>
     </section>
 
-    <section class="kpi-grid" aria-label="2025 emergency response activity">
-      <article class="kpi-card"><div class="kpi-icon">01</div><span>Emergency Incidents</span><strong>7,014</strong><small>Total emergency incidents during 2025</small></article>
-      <article class="kpi-card"><div class="kpi-icon">02</div><span>EMS Incidents</span><strong>5,050</strong><small>Incidents involving emergency medical care</small></article>
-      <article class="kpi-card"><div class="kpi-icon">03</div><span>Unit Responses</span><strong>8,963</strong><small>Total responses completed by department units</small></article>
-      <article class="kpi-card"><div class="kpi-icon">04</div><span>EMS Workload</span><strong>72%</strong><small>Share of total incidents involving EMS</small></article>
-      <article class="kpi-card"><div class="kpi-icon">05</div><span>Average Daily Incidents</span><strong>19.2</strong><small>Average emergency incidents per day</small></article>
-      <article class="kpi-card"><div class="kpi-icon">06</div><span>All-Hazards Response</span><strong>24/7</strong><small>Fire, EMS, rescue, hazards, and mutual aid</small></article>
+    <section class="kpi-grid" aria-label="2026 emergency response activity">
+      <article class="kpi-card"><div class="kpi-icon">01</div><span>Emergency Incidents YTD</span><strong>3,494</strong><small>January 1 through July 15, 2026</small></article>
+      <article class="kpi-card"><div class="kpi-icon">02</div><span>Incidents in July</span><strong>293</strong><small>July 1 through July 15</small></article>
+      <article class="kpi-card"><div class="kpi-icon">DATE</div><span>Incidents on July 15</span><strong>12</strong><small>Most recent date in the uploaded export</small></article>
+      <article class="kpi-card"><div class="kpi-icon">04</div><span>Average Incidents Per Day</span><strong>17.8</strong><small>Average across the available 2026 period</small></article>
+      <article class="kpi-card"><div class="kpi-icon">05</div><span>Medical-Related Dispatches</span><strong>2,626</strong><small>75.2% identified from dispatch-type labels</small></article>
+      <article class="kpi-card"><div class="kpi-icon">06</div><span>Apparatus Responses</span><strong>N/A</strong><small>Not included in this incident-level export</small></article>
     </section>
 
 
@@ -85,40 +101,31 @@
 
       <div class="seasonal-grid">
         <article class="seasonal-card local-fire-card">
-          <div class="seasonal-label">
-            <span class="seasonal-symbol">WF</span>
-            <span>Local Vegetation Fires</span>
-          </div>
-          <strong>No major local incident shown</strong>
-          <small>Public wildfire mapping and incident updates</small>
-          <a href="https://app.watchduty.org/" target="_blank" rel="noopener noreferrer">View Watch Duty Map <span aria-hidden="true">↗</span></a>
+          <div class="seasonal-label"><span class="seasonal-symbol">WF</span><span>Gilroy Vegetation Fires</span></div>
+          <strong id="veg-count">18 incidents in 15 days</strong>
+          <small id="veg-detail">First Due activity through July 18, 2026</small>
+          <a href="https://app.watchduty.org/" target="_blank" rel="noopener noreferrer">Open Watch Duty Live Map <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="seasonal-card deployment-card">
+          <div class="seasonal-label"><span class="seasonal-symbol">OES</span><span>GFD Mutual-Aid Deployment</span></div>
+          <strong>OES Engine 2614 — Deployed</strong>
+          <small>Oregon interstate wildfire support • deployed July 17, 2026 • incident assignment pending</small>
+          <span class="card-status deployed">Local stations remain staffed</span>
         </article>
 
         <article class="seasonal-card">
-          <div class="seasonal-label">
-            <span class="seasonal-symbol">WX</span>
-            <span>Fire Weather</span>
-          </div>
-          <strong>Conditions coming soon</strong>
-          <small>Wind, humidity, heat, and Red Flag information</small>
+          <div class="seasonal-label"><span class="seasonal-symbol">WX</span><span>Gilroy Fire Weather</span></div>
+          <strong id="weather-summary">Loading current conditions…</strong>
+          <small id="weather-detail">Temperature, humidity, wind, and active NWS alerts</small>
+          <a href="https://www.weather.gov/" target="_blank" rel="noopener noreferrer">National Weather Service <span aria-hidden="true">↗</span></a>
         </article>
 
         <article class="seasonal-card">
-          <div class="seasonal-label">
-            <span class="seasonal-symbol">OES</span>
-            <span>Gilroy Resources Deployed</span>
-          </div>
-          <strong>Deployment status coming soon</strong>
-          <small>Resources assigned to regional or statewide incidents</small>
-        </article>
-
-        <article class="seasonal-card">
-          <div class="seasonal-label">
-            <span class="seasonal-symbol">AQ</span>
-            <span>Smoke &amp; Air Quality</span>
-          </div>
-          <strong>Air-quality status coming soon</strong>
-          <small>Regional smoke conditions that may affect Gilroy</small>
+          <div class="seasonal-label"><span class="seasonal-symbol">AQ</span><span>Smoke &amp; Air Quality</span></div>
+          <strong>Check current smoke impacts</strong>
+          <small>Wildfire smoke can affect Gilroy even when the fire is hundreds of miles away.</small>
+          <a href="https://ww2.arb.ca.gov/smokereadyca" target="_blank" rel="noopener noreferrer">Smoke Ready California <span aria-hidden="true">↗</span></a>
         </article>
       </div>
 
@@ -135,27 +142,27 @@
       <article class="panel current-operations">
         <div class="panel-heading">
           <div>
-            <p class="section-kicker">Current Operational Picture</p>
+            <p class="section-kicker">Current Operations</p>
             <h2>What is happening in Gilroy Fire right now?</h2>
             <p class="panel-intro">A current view of emergency activity and the resources assigned to incidents.</p>
           </div>
-          <span class="source-badge">Live Data Coming Next</span>
+          <span class="source-badge">Live via OurGilroy / PulsePoint</span>
         </div>
 
         <div class="operations-grid">
-          <div class="operation-tile featured"><div class="tile-indicator"></div><strong>—</strong><span>Active Emergency Incidents</span><small>Incidents currently in progress</small></div>
-          <div class="operation-tile"><strong>—</strong><span>Today's Emergency Incidents</span><small>Total incidents since midnight</small></div>
-          <div class="operation-tile"><strong>—</strong><span>Medical Calls Today</span><small>Incidents involving emergency medical care</small></div>
-          <div class="operation-tile"><strong>—</strong><span>Fire &amp; Rescue Calls Today</span><small>Fire, rescue, hazard, and other responses</small></div>
-          <div class="operation-tile"><strong>—</strong><span>Gilroy Fire Units Assigned</span><small>Department apparatus committed to incidents</small></div>
-          <div class="operation-tile"><strong>—</strong><span>Command Officers Assigned</span><small>Battalion Chiefs managing active incidents</small></div>
-          <div class="operation-tile"><strong>—</strong><span>ALS Ambulances Assigned</span><small>Advanced life support ambulances listed</small></div>
-          <div class="operation-tile"><strong>—</strong><span>BLS Ambulances Assigned</span><small>Basic life support ambulances listed</small></div>
+          <div class="operation-tile featured"><div class="tile-indicator"></div><strong id="active-incidents">—</strong><span>Active Emergency Incidents</span><small>Incidents currently in progress</small></div>
+          <div class="operation-tile"><strong id="incidents-today">—</strong><span>Today's Emergency Incidents</span><small>Total incidents since midnight</small></div>
+          <div class="operation-tile"><strong id="ems-today">—</strong><span>Medical Calls Today</span><small>Incidents involving emergency medical care</small></div>
+          <div class="operation-tile"><strong id="fire-today">—</strong><span>Fire &amp; Rescue Calls Today</span><small>Fire, rescue, hazard, and other responses</small></div>
+          <div class="operation-tile"><strong id="units-assigned">—</strong><span>Gilroy Fire Units Assigned</span><small>Department apparatus committed to incidents</small></div>
+          <div class="operation-tile"><strong id="chiefs-assigned">—</strong><span>Command Officers Assigned</span><small>Battalion Chiefs managing active incidents</small></div>
+          <div class="operation-tile"><strong id="als-assigned">—</strong><span>ALS Ambulances Assigned</span><small>Advanced life support ambulances listed</small></div>
+          <div class="operation-tile"><strong id="bls-assigned">—</strong><span>BLS Ambulances Assigned</span><small>Basic life support ambulances listed</small></div>
         </div>
 
         <div class="panel-footer">
           <p>Only verified public incident information will appear in this section.</p>
-          <span>Automatic updates planned</span>
+          <span><span id="live-update-status">Connecting to public incident feed…</span></span>
         </div>
       </article>
 
@@ -185,13 +192,13 @@
     <section class="panel history-panel" aria-labelledby="history-title">
       <div class="history-heading">
         <div>
-          <p class="section-kicker">Historical Response Activity</p>
+          <p class="section-kicker">Response Trends</p>
           <h2 id="history-title">How emergency demand is changing</h2>
           <p>
             Year-to-year information will be compared only where the reporting periods and data sources support a fair comparison.
           </p>
         </div>
-        <span class="source-badge">First Due RMS</span>
+        <span class="source-badge">First Due RMS · Uploaded Exports</span>
       </div>
 
       <div class="history-years">
@@ -200,8 +207,8 @@
             <strong>2024</strong>
             <span>Partial Reporting Year</span>
           </div>
-          <div class="history-value">—</div>
-          <p>First Due RMS was not active for the full calendar year. This year provides historical context but will not be presented as a complete annual total.</p>
+          <div class="history-value">5,024 incidents</div>
+          <p>Partial First Due export covering February 21 through December 31, 2024. This is not a complete calendar-year total.</p>
         </article>
 
         <article class="history-year">
@@ -216,10 +223,10 @@
         <article class="history-year current-year">
           <div class="year-line">
             <strong>2026</strong>
-            <span>Year to Date</span>
+            <span>Year to Date · Through July 15</span>
           </div>
-          <div class="history-value">—</div>
-          <p>Current-year activity will be compared with the same date range in prior years whenever the available data supports it.</p>
+          <div class="history-value">3,494 incidents</div>
+          <p>Current First Due export covering January 1 through July 15, 2026, averaging 17.8 incidents per day.</p>
         </article>
       </div>
 
@@ -234,7 +241,7 @@
 
     <section class="panel information-panel">
       <div class="information-heading">
-        <p class="section-kicker">Dashboard Information</p>
+        <p class="section-kicker">About This Dashboard</p>
         <h2>A complete view of emergency service</h2>
         <p>Each section will use a clearly identified and verified source so the public can distinguish live incident activity from official department reporting.</p>
       </div>
@@ -250,12 +257,12 @@
 
   <footer>
     <div class="brand-lockup footer-brand">
-      <img src="static/images/gilroy-fire-logo.jfif" alt="">
+      <img src="{{ url_for('static', filename='images/gilroy-fire-logo.jfif') }}" alt="">
       <div><strong>Gilroy Fire Department</strong><span>Prepared to respond. Committed to serve.</span></div>
     </div>
     <div class="footer-copy"><strong>Gilroy Fire Operations</strong><span>Public information dashboard</span></div>
   </footer>
 
-  <script src="static/js/app.js"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>

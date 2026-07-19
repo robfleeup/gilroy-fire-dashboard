@@ -1,19 +1,11 @@
-# Gilroy Fire Operations — Version 1.4
+# Gilroy Fire Operations — Version 1.6
 
-This release populates the dashboard with verified 2025 department activity and operationally accurate department capabilities.
+This release adds live-ready Current Operations using the OurGilroy public incident feed, NWS weather and alerts, verified First Due vegetation-fire activity, a Watch Duty live-map link, Smoke Ready California, and the current OES Engine 2614 Oregon deployment.
 
-## Updates
-- Removed the computer-screen hero image
-- Corrected frontline deployment to three engine companies
-- Identified Truck 47 as one cross-staffed truck company
-- Added verified 2025 activity: 7,014 incidents, 5,050 EMS incidents, 8,963 unit responses, 72% EMS workload, and 19.2 average daily incidents
-- Updated the 2025 response-trend baseline
+## Live sources
+- OurGilroy public incident API: `https://ourgilroy.com/api/fire.php?view=incidents`
+- National Weather Service API
+- Watch Duty live map (linked)
+- California Air Resources Board Smoke Ready California (linked)
 
-Run locally with `python app.py`, or deploy using the included Render configuration.
-
-
-## Version 1.5 data update
-- Loaded 2024 partial First Due export: 5,024 incidents, February 21–December 31, 2024.
-- Loaded 2026 YTD First Due export: 3,494 incidents, January 1–July 15, 2026.
-- Replaced the hero slideshow with seven newly supplied Gilroy Fire incident photographs.
-- Apparatus-response totals remain unavailable because the uploaded CSV is incident-level and contains only the first-arriving unit, not every responding unit.
+The public incident feed refreshes every three minutes. If the source is unavailable, the page displays a transparent unavailable message rather than invented values.

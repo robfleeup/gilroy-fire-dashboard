@@ -1,0 +1,39 @@
+{
+  "count": 18,
+  "start": "July 4, 2026",
+  "end": "July 18, 2026",
+  "average_per_day": 1.2,
+  "most_recent": "July 18, 2026 at 12:44 AM",
+  "recent": [
+    {
+      "date": "Jul 18",
+      "location": "PONDEROSA DR & THIRD ST Gilroy CA 95020",
+      "type": "VEGETATION FIRE",
+      "unit": "Engine 48"
+    },
+    {
+      "date": "Jul 17",
+      "location": "PACHECO PASS HY & BLOOMFIELD AV Santa Clara County CA 95020",
+      "type": "AUTO AID VEGETATION FIRE",
+      "unit": "Not listed"
+    },
+    {
+      "date": "Jul 15",
+      "location": "6205 ENGLE WAY, GILROY, CA, 95020",
+      "type": "VEGETATION FIRE",
+      "unit": "Engine 47"
+    },
+    {
+      "date": "Jul 14",
+      "location": "1599 THIRD ST Gilroy CA 95020",
+      "type": "VEGETATION FIRE",
+      "unit": "Engine 50"
+    },
+    {
+      "date": "Jul 14",
+      "location": "GREENFIELD DR & CHARLES LUX DR Gilroy CA 95020",
+      "type": "VEGETATION FIRE",
+      "unit": "Chief 3 (B48)"
+    }
+  ]
+}
