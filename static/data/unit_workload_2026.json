@@ -1,58 +1,64 @@
 {
-  "source_90_day": "First Due dispatch export",
-  "period_start": "2026-04-19",
-  "period_end": "2026-07-17",
-  "incident_records_90_day": 1657,
-  "gilroy_unit_responses_90_day": 2183,
+  "source_90_day": "First Due master incident/dispatch export",
+  "source_ytd": "First Due master incident/dispatch export",
+  "period_start": "2026-04-20",
+  "period_end": "2026-07-18",
+  "ytd_start": "2026-01-01",
+  "ytd_end": "2026-07-18",
+  "incident_records_90_day": 1654,
+  "gilroy_unit_responses_90_day": 2178,
   "average_gilroy_units_per_incident": 1.32,
+  "incident_records_ytd": 3544,
+  "gilroy_unit_responses_ytd": 4510,
+  "average_gilroy_units_per_incident_ytd": 1.27,
   "units": {
     "E47": {
-      "last_90_days": 623,
-      "ytd": 979
+      "last_90_days": 624,
+      "ytd": 1369
     },
     "E48": {
-      "last_90_days": 731,
-      "ytd": 1130
+      "last_90_days": 729,
+      "ytd": 1477
     },
     "E49": {
-      "last_90_days": 423,
-      "ytd": 504
+      "last_90_days": 419,
+      "ytd": 815
     },
     "E50": {
       "last_90_days": 16,
-      "ytd": 109
+      "ytd": 181
     },
     "T47": {
       "last_90_days": 30,
-      "ytd": 45
+      "ytd": 76
     },
     "RM49": {
-      "last_90_days": 192,
-      "ytd": 165
+      "last_90_days": 191,
+      "ytd": 285
     },
     "E650": {
       "last_90_days": 34,
-      "ytd": 25
+      "ytd": 58
     },
     "E348": {
       "last_90_days": 2,
-      "ytd": 0
+      "ytd": 3
     },
     "B47": {
-      "last_90_days": 48,
-      "ytd": 16
+      "last_90_days": 49,
+      "ytd": 91
     },
     "B48": {
       "last_90_days": 42,
-      "ytd": 16
+      "ytd": 85
     },
     "B49": {
       "last_90_days": 37,
-      "ytd": 5
+      "ytd": 63
     },
     "B50": {
       "last_90_days": 5,
-      "ytd": 1
+      "ytd": 7
     }
   }
 }

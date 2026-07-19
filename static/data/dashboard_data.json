@@ -12,20 +12,21 @@
     "latest_month_incidents": 563
   },
   "2026": {
-    "incidents": 3494,
+    "incidents": 3544,
     "start": "January 1, 2026",
-    "end": "July 15, 2026",
-    "end_iso": "2026-07-15",
-    "days": 196,
+    "end": "July 18, 2026",
+    "end_iso": "2026-07-18",
+    "days": 199,
     "average_per_day": 17.8,
-    "ems_dispatches": 2626,
-    "ems_percent": 75.2,
-    "latest_day_incidents": 12,
-    "latest_month_incidents": 293
+    "ems_dispatches": 2787,
+    "ems_percent": 78.6,
+    "latest_day_incidents": 19,
+    "latest_month_incidents": 347,
+    "unit_responses": 4510
   },
   "notes": {
     "2024": "Partial reporting period; First Due export begins February 21, 2024.",
-    "2026": "Year-to-date export through July 15, 2026.",
-    "apparatus_responses": "Not available in these incident-level exports."
+    "2026": "Year-to-date master export through July 18, 2026.",
+    "apparatus_responses": "Gilroy unit responses are calculated from the DISPATCH UNITS column for the listed department units."
   }
 }

@@ -69,24 +69,24 @@
 <section class="overview-banner">
       <div>
         <p class="section-kicker">Department Activity</p>
-        <h2>2026 Emergency Response <small class="data-through">Through July 15</small></h2>
+        <h2>2026 Emergency Response <small class="data-through">Through July 18</small></h2>
       </div>
       <div class="reporting-status">
         <span class="status-dot"></span>
         <div>
           <strong>First Due incident data loaded</strong>
-          <small>3,494 incidents through July 15, 2026.</small>
+          <small>3,544 incidents through July 18, 2026.</small>
         </div>
       </div>
     </section>
 
     <section class="kpi-grid" aria-label="2026 emergency response activity">
-      <article class="kpi-card"><div class="kpi-icon">01</div><span>Emergency Incidents YTD</span><strong>3,494</strong><small>January 1 through July 15, 2026</small></article>
-      <article class="kpi-card"><div class="kpi-icon">02</div><span>Incidents in July</span><strong>293</strong><small>July 1 through July 15</small></article>
-      <article class="kpi-card"><div class="kpi-icon">DATE</div><span>Incidents on July 15</span><strong>12</strong><small>Most recent date in the uploaded export</small></article>
+      <article class="kpi-card"><div class="kpi-icon">01</div><span>Emergency Incidents YTD</span><strong>3,544</strong><small>January 1 through July 18, 2026</small></article>
+      <article class="kpi-card"><div class="kpi-icon">02</div><span>Incidents in July</span><strong>347</strong><small>July 1 through July 18</small></article>
+      <article class="kpi-card"><div class="kpi-icon">DATE</div><span>Incidents on July 18</span><strong>19</strong><small>Most recent date in the uploaded export</small></article>
       <article class="kpi-card"><div class="kpi-icon">04</div><span>Average Incidents Per Day</span><strong>17.8</strong><small>Average across the available 2026 period</small></article>
-      <article class="kpi-card"><div class="kpi-icon">05</div><span>Medical-Related Dispatches</span><strong>2,626</strong><small>75.2% identified from dispatch-type labels</small></article>
-      <article class="kpi-card"><div class="kpi-icon">06</div><span>Apparatus Responses</span><strong>N/A</strong><small>Not included in this incident-level export</small></article>
+      <article class="kpi-card"><div class="kpi-icon">05</div><span>Medical-Related Dispatches</span><strong>2,787</strong><small>78.6% identified from dispatch-type labels</small></article>
+      <article class="kpi-card"><div class="kpi-icon">06</div><span>Gilroy Unit Responses YTD</span><strong>4,510</strong><small>Counted from units listed on each incident</small></article>
     </section>
 
 
@@ -195,12 +195,12 @@
           <h2 id="unit-activity-title">Last 90 days and 2026 year-to-date activity by unit</h2>
           <p>Company and Chief Officer response activity based on Gilroy Fire unit responses.</p>
         </div>
-        <span class="source-badge">First Due RMS · 90-day dispatch export and 2026 YTD data</span>
+        <span class="source-badge">First Due RMS · Master incident and dispatch-unit export</span>
       </div>
 
       <div class="unit-summary-grid workload-summary-grid">
-        <article><span>Emergency Incidents</span><strong id="workload-incidents">1,657</strong><small>April 19–July 17, 2026</small></article>
-        <article><span>Gilroy Unit Responses</span><strong id="workload-unit-responses">2,183</strong><small>Only listed Gilroy Fire units</small></article>
+        <article><span>Emergency Incidents</span><strong id="workload-incidents">1,654</strong><small>April 20–July 18, 2026</small></article>
+        <article><span>Gilroy Unit Responses</span><strong id="workload-unit-responses">2,178</strong><small>Only listed Gilroy Fire units</small></article>
         <article><span>Average Units per Incident</span><strong id="workload-average">1.32</strong><small>Gilroy units per incident record</small></article>
       </div>
 
@@ -209,7 +209,7 @@
       </div>
 
       <div class="unit-activity-note">
-        <strong>Data note:</strong> Last 90 Days counts every listed Gilroy unit on each dispatch record. The 2026 YTD column uses the current First Due unit data through July 15, 2026.
+        <strong>Data note:</strong> Last 90 Days and 2026 YTD counts are calculated from the DISPATCH UNITS column in the master First Due export. This dashboard is updated manually when a new export is provided.
       </div>
     </section>
 
@@ -248,10 +248,10 @@
         <article class="history-year current-year">
           <div class="year-line">
             <strong>2026</strong>
-            <span>Year to Date · Through July 15</span>
+            <span>Year to Date · Through July 18</span>
           </div>
-          <div class="history-value">3,494 incidents</div>
-          <p>Current First Due export covering January 1 through July 15, 2026, averaging 17.8 incidents per day.</p>
+          <div class="history-value">3,544 incidents</div>
+          <p>Current First Due export covering January 1 through July 18, 2026, averaging 17.8 incidents per day.</p>
         </article>
       </div>
 
@@ -289,6 +289,6 @@
   </footer>
 
   <script src="{{ url_for('static', filename='js/app.js') }}"></script>
-  <div class="build-version" aria-hidden="true">Dashboard build 1.7</div>
+  <div class="build-version" aria-hidden="true">Dashboard build 1.8</div>
 </body>
 </html>

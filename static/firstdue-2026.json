@@ -1,13 +1,13 @@
 {
-  "source": "First Due incident report export",
-  "as_of": "2026-07-15T19:08:23",
+  "source": "First Due master incident/dispatch export",
+  "as_of": "2026-07-18T20:40:00",
   "year": 2026,
-  "total_incidents": 3494,
-  "incidents_today": 12,
-  "incidents_month": 293,
+  "total_incidents": 3544,
+  "incidents_today": 19,
+  "incidents_month": 347,
   "average_daily": 17.8,
-  "medical_count": 2475,
-  "medical_percent": 70.8,
+  "medical_count": 2787,
+  "medical_percent": 78.6,
   "authorized_reports": 3424,
   "authorized_percent": 98.0,
   "missing_first_arriving": 495,
@@ -255,5 +255,56 @@
       "status": "Pending Authorization",
       "count": 3
     }
-  ]
+  ],
+  "gilroy_unit_responses_ytd": 4510,
+  "unit_responses": {
+    "E47": {
+      "last_90_days": 624,
+      "ytd": 1369
+    },
+    "E48": {
+      "last_90_days": 729,
+      "ytd": 1477
+    },
+    "E49": {
+      "last_90_days": 419,
+      "ytd": 815
+    },
+    "E50": {
+      "last_90_days": 16,
+      "ytd": 181
+    },
+    "T47": {
+      "last_90_days": 30,
+      "ytd": 76
+    },
+    "RM49": {
+      "last_90_days": 191,
+      "ytd": 285
+    },
+    "E650": {
+      "last_90_days": 34,
+      "ytd": 58
+    },
+    "E348": {
+      "last_90_days": 2,
+      "ytd": 3
+    },
+    "B47": {
+      "last_90_days": 49,
+      "ytd": 91
+    },
+    "B48": {
+      "last_90_days": 42,
+      "ytd": 85
+    },
+    "B49": {
+      "last_90_days": 37,
+      "ytd": 63
+    },
+    "B50": {
+      "last_90_days": 5,
+      "ytd": 7
+    }
+  }
 }

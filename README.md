@@ -1,4 +1,4 @@
-# Gilroy Fire Operations Dashboard — Version 1.7
+# Gilroy Fire Operations Dashboard — Version 1.8
 
 This version replaces monthly unit activity with Last 90 Days and 2026 YTD.
 
@@ -41,3 +41,11 @@ Keep `app.py`, `requirements.txt`, and `render.yaml` as the stable backend. Futu
 - Watch Duty and Smoke Ready California links
 - 2024 partial and 2026 YTD First Due exports
 - Uploaded GFD incident photographs
+
+
+## Version 1.8 data refresh
+- Master export through July 18, 2026
+- 2026 YTD incidents: 3,544
+- 2026 YTD Gilroy unit responses: 4,510
+- Last 90 days (2026-04-20 through 2026-07-18): 1,654 incidents and 2,178 Gilroy unit responses
+- Unit activity is a manual snapshot and changes only when a new First Due export is added and the dashboard is redeployed.
