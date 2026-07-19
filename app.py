@@ -12,7 +12,7 @@ import urllib.request
 from datetime import datetime, timezone
 from flask import Flask, jsonify, render_template, send_from_directory
 
-APP = Flask(__name__)
+app = Flask(__name__)
 
 DB_PATH = os.getenv("DASHBOARD_DB", "/tmp/gilroy_fire.db")
 AGENCY_ID = os.getenv("PULSEPOINT_AGENCY_ID", "43010")
