@@ -15,7 +15,39 @@
       set('fire-today',d.fire_other_today); set('units-assigned',d.gilroy_units_committed); set('chiefs-assigned',d.chiefs_committed);
       set('als-assigned',d.als_assigned); set('bls-assigned',d.bls_assigned);
       const updated=new Date(d.updated_at); set('live-update-status','Updated '+updated.toLocaleTimeString([], {hour:'numeric',minute:'2-digit'})+' • OurGilroy public incident feed');
+      await refreshUnitResponses();
     }catch(e){ set('live-update-status','Live feed temporarily unavailable — verified historical data remains displayed'); }
+  }
+
+  async function refreshUnitResponses(){
+    try{
+      const r=await fetch('/api/metrics',{cache:'no-store'}); if(!r.ok) throw new Error('unit metrics unavailable');
+      const d=await r.json();
+      set('unit-responses-today',d.summary?.today?.unit_responses ?? '—');
+      set('unit-responses-month',d.summary?.month?.unit_responses ?? '—');
+      set('unit-responses-ytd',d.summary?.ytd?.unit_responses ?? '—');
+      set('chief-responses-ytd',d.summary?.ytd?.chief_responses ?? '—');
+
+      const preferred=['E47','E48','E49','E50','T47','RM49','E650','B47','B48','B49','B50'];
+      const byId=new Map((d.units||[]).map(u=>[u.unit_id,u]));
+      const grid=document.getElementById('unit-response-grid');
+      if(!grid)return;
+      grid.innerHTML=preferred.map(id=>{
+        const u=byId.get(id)||{unit_id:id,unit_type:id.startsWith('B')?'Chief Officer':id.startsWith('T')?'Truck':id.startsWith('RM')?'Rescue Medic':'Engine',today:0,month:0,ytd:0};
+        const label=u.unit_type==='Chief Officer'?'Battalion Chief':u.unit_type;
+        return `<article class="unit-response-card ${u.unit_type==='Chief Officer'?'chief-card':''}">
+          <div class="unit-card-head"><strong>${u.unit_id}</strong><span>${label}</span></div>
+          <div class="unit-periods">
+            <div><b>${u.today||0}</b><small>Today</small></div>
+            <div><b>${u.month||0}</b><small>Month</small></div>
+            <div><b>${u.ytd||0}</b><small>YTD</small></div>
+          </div>
+        </article>`;
+      }).join('');
+    }catch(e){
+      const grid=document.getElementById('unit-response-grid');
+      if(grid)grid.innerHTML='<div class="unit-loading">Unit response data is temporarily unavailable from the public feed.</div>';
+    }
   }
   async function refreshWeather(){
     try{

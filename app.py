@@ -583,7 +583,7 @@ def alerts():
 
 @app.route("/health")
 def health():
-    return jsonify({"status":"ok","application":"Gilroy Fire Operations","version":"1.6-live-wildland"})
+    return jsonify({"status":"ok","application":"Gilroy Fire Operations","version":"1.6.2-live-unit-responses"})
 
 @app.route("/api/vegetation-activity")
 def vegetation_activity():

@@ -188,6 +188,32 @@
       </aside>
     </section>
 
+    <section class="panel unit-activity-panel" aria-labelledby="unit-activity-title">
+      <div class="unit-activity-heading">
+        <div>
+          <p class="section-kicker">Live Unit Response Activity</p>
+          <h2 id="unit-activity-title">Responses by Gilroy Fire unit and chief officer</h2>
+          <p>Counts are built from the units listed on the public OurGilroy/PulsePoint incident feed. They represent listed unit responses, not First Due apparatus totals.</p>
+        </div>
+        <span class="source-badge">Live via OurGilroy / PulsePoint</span>
+      </div>
+
+      <div class="unit-summary-grid">
+        <article><span>Gilroy Unit Responses Today</span><strong id="unit-responses-today">—</strong></article>
+        <article><span>Gilroy Unit Responses This Month</span><strong id="unit-responses-month">—</strong></article>
+        <article><span>Gilroy Unit Responses YTD</span><strong id="unit-responses-ytd">—</strong></article>
+        <article><span>Chief Officer Responses YTD</span><strong id="chief-responses-ytd">—</strong></article>
+      </div>
+
+      <div id="unit-response-grid" class="unit-response-grid" aria-live="polite">
+        <div class="unit-loading">Loading unit response activity…</div>
+      </div>
+
+      <div class="unit-activity-note">
+        <strong>Units displayed:</strong> E47, E48, E49, E50, T47, RM49, E650, and Battalion Chiefs B47–B50. A zero means the public feed did not list that unit during the selected period.
+      </div>
+    </section>
+
 
     <section class="panel history-panel" aria-labelledby="history-title">
       <div class="history-heading">
