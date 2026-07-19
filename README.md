@@ -1,11 +1,25 @@
-# Gilroy Fire Operations — Version 1.6
+# Gilroy Fire Operations — Version 1.6.1 Render Fix
 
-This release adds live-ready Current Operations using the OurGilroy public incident feed, NWS weather and alerts, verified First Due vegetation-fire activity, a Watch Duty live-map link, Smoke Ready California, and the current OES Engine 2614 Oregon deployment.
+This package preserves the Version 1.6 dashboard and live-data features while fixing the Render/Gunicorn startup error.
 
-## Live sources
-- OurGilroy public incident API: `https://ourgilroy.com/api/fire.php?view=incidents`
-- National Weather Service API
-- Watch Duty live map (linked)
-- California Air Resources Board Smoke Ready California (linked)
+## Render settings
+- Build command: `pip install -r requirements.txt`
+- Start command: `gunicorn app:app`
+- Health check: `/health`
 
-The public incident feed refreshes every three minutes. If the source is unavailable, the page displays a transparent unavailable message rather than invented values.
+The Flask application object is now consistently named `app`, matching the Render start command.
+
+## Safe update rule
+Keep `app.py`, `requirements.txt`, and `render.yaml` as the stable backend. Future routine updates should normally be limited to:
+- `templates/`
+- `static/`
+- `data/`
+
+## Included data and features
+- Live OurGilroy incident-feed integration
+- Current operations tiles
+- NWS weather and alerts
+- Vegetation-fire activity
+- Watch Duty and Smoke Ready California links
+- 2024 partial and 2026 YTD First Due exports
+- Uploaded GFD incident photographs

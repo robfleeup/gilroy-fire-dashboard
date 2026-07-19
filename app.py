@@ -267,18 +267,18 @@ def period_values():
     now = datetime.now().astimezone()
     return now.strftime("%Y-%m-%d"), now.strftime("%Y-%m"), now.strftime("%Y")
 
-@APP.route("/")
+@app.route("/")
 def home():
     return render_template("index.html", agency_id=AGENCY_ID)
 
-@APP.route("/api/sync", methods=["POST"])
+@app.route("/api/sync", methods=["POST"])
 def sync():
     try:
         return jsonify(fetch_all_incidents())
     except Exception as exc:
         return jsonify({"mode": "error", "message": str(exc)}), 502
 
-@APP.route("/api/metrics")
+@app.route("/api/metrics")
 def metrics():
     try:
         fetch_all_incidents()
@@ -371,7 +371,7 @@ def metrics():
         "last_sync": LAST_SYNC_RESULT,
     })
 
-@APP.route("/api/recent")
+@app.route("/api/recent")
 def recent():
     try:
         fetch_all_incidents()
@@ -397,12 +397,12 @@ def recent():
     return jsonify([dict(row) for row in rows])
 
 
-@APP.route("/api/firstdue-snapshot")
+@app.route("/api/firstdue-snapshot")
 def firstdue_snapshot():
-    return send_from_directory(APP.static_folder, "firstdue-2026.json", mimetype="application/json")
+    return send_from_directory(app.static_folder, "firstdue-2026.json", mimetype="application/json")
 
 
-@APP.route("/api/current-operations")
+@app.route("/api/current-operations")
 def current_operations():
     try:
         fetch_all_incidents()
@@ -533,7 +533,7 @@ def current_operations():
         "active_incident_list": active_incidents,
     })
 
-@APP.route("/api/weather")
+@app.route("/api/weather")
 def weather():
     try:
         point = get_json(f"https://api.weather.gov/points/{GILROY_LAT},{GILROY_LON}")
@@ -564,7 +564,7 @@ def weather():
     except Exception as exc:
         return jsonify({"error": str(exc)}), 502
 
-@APP.route("/api/alerts")
+@app.route("/api/alerts")
 def alerts():
     try:
         data = get_json(f"https://api.weather.gov/alerts/active?point={GILROY_LAT},{GILROY_LON}")
@@ -581,15 +581,15 @@ def alerts():
         return jsonify({"error": str(exc), "count": 0, "alerts": []}), 502
 
 
-@APP.route("/health")
+@app.route("/health")
 def health():
     return jsonify({"status":"ok","application":"Gilroy Fire Operations","version":"1.6-live-wildland"})
 
-@APP.route("/api/vegetation-activity")
+@app.route("/api/vegetation-activity")
 def vegetation_activity():
-    return send_from_directory(APP.static_folder, "data/vegetation_activity.json", mimetype="application/json")
+    return send_from_directory(app.static_folder, "data/vegetation_activity.json", mimetype="application/json")
 
 init_db()
 
 if __name__ == "__main__":
-    APP.run(host="0.0.0.0", port=int(os.getenv("PORT", "8080")), debug=True)
+    app.run(host="0.0.0.0", port=int(os.getenv("PORT", "8080")), debug=True)
