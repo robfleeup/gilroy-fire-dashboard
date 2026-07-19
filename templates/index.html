@@ -34,7 +34,16 @@
       </div>
     </nav>
 
-    <div class="hero-content">
+    <nav class="site-navigation" aria-label="Primary navigation">
+      <a href="#home">Home</a>
+      <a href="#operations">Operations</a>
+      <a href="#current-incidents">Current Incidents</a>
+      <a href="#annual-report">Annual Report</a>
+      <a href="#community">Community</a>
+      <a href="#about">About GFD</a>
+    </nav>
+
+    <div class="hero-content" id="home">
       <p class="eyebrow">Serving Gilroy Around the Clock</p>
       <h1>Gilroy Fire<br>Operations</h1>
       <p class="subtitle">Emergency response, community readiness, and seasonal awareness</p>
@@ -66,7 +75,7 @@
       </div>
     </section>
 
-<section class="overview-banner">
+<section class="overview-banner" id="operations">
       <div>
         <p class="section-kicker">Department Activity</p>
         <h2>2026 Emergency Response <small class="data-through">Through July 18</small></h2>
@@ -90,7 +99,7 @@
     </section>
 
 
-    <section class="seasonal-awareness panel" aria-labelledby="seasonal-title">
+    <section class="seasonal-awareness panel" id="community" aria-labelledby="seasonal-title">
       <div class="seasonal-copy">
         <p class="section-kicker">Seasonal Awareness</p>
         <h2 id="seasonal-title">Local Fire Conditions &amp; Regional Activity</h2>
@@ -139,7 +148,7 @@
     </section>
 
     <section class="dashboard-grid">
-      <article class="panel current-operations">
+      <article class="panel current-operations" id="current-incidents">
         <div class="panel-heading">
           <div>
             <p class="section-kicker">Current Operations</p>
@@ -276,7 +285,23 @@
       </div>
     </section>
 
-    <section class="panel information-panel">
+    <section class="panel annual-report-panel" id="annual-report" aria-labelledby="annual-report-title">
+      <div class="annual-report-copy">
+        <p class="section-kicker">Annual Report</p>
+        <h2 id="annual-report-title">Gilroy Fire Department Annual Report</h2>
+        <p>Department performance, emergency response, community programs, personnel accomplishments, and major initiatives in one public report.</p>
+      </div>
+      <div class="annual-report-card">
+        <div>
+          <span>Most Recent Report</span>
+          <strong>2025 Annual Report</strong>
+          <p>The annual report link can be added here when the final City-approved report is posted.</p>
+        </div>
+        <a class="annual-report-link" href="#annual-report" aria-disabled="true">Annual Report Section</a>
+      </div>
+    </section>
+
+    <section class="panel information-panel" id="about">
       <div class="information-heading">
         <p class="section-kicker">About This Dashboard</p>
         <h2>A complete view of emergency service</h2>
@@ -292,15 +317,34 @@
     </section>
   </main>
 
-  <footer>
-    <div class="brand-lockup footer-brand">
-      <img src="{{ url_for('static', filename='images/gilroy-fire-logo.jfif') }}" alt="">
-      <div><strong>Gilroy Fire Department</strong><span>Prepared to respond. Committed to serve.</span></div>
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="brand-lockup footer-brand">
+        <img src="{{ url_for('static', filename='images/gilroy-fire-logo.jfif') }}" alt="Gilroy Fire Department logo">
+        <div>
+          <strong>Gilroy Fire Department</strong>
+          <span>City of Gilroy, California</span>
+          <small>Prepared to respond. Committed to serve.</small>
+        </div>
+      </div>
+      <div class="footer-details">
+        <strong>Gilroy Fire Operations</strong>
+        <span>Emergency response and operational information</span>
+        <small>Department data updated through July 18, 2026</small>
+      </div>
+      <div class="footer-sources">
+        <strong>Public Data Sources</strong>
+        <span>First Due RMS · PulsePoint · CAL FIRE · National Weather Service</span>
+        <small>Historical dashboard data is refreshed manually from department reports.</small>
+      </div>
     </div>
-    <div class="footer-copy"><strong>Gilroy Fire Operations</strong><span>Public information dashboard</span></div>
+    <div class="footer-bottom">
+      <span>© 2026 City of Gilroy Fire Department</span>
+      <a href="#home">Back to top ↑</a>
+    </div>
   </footer>
 
   <script src="{{ url_for('static', filename='js/app.js') }}"></script>
-  <div class="build-version" aria-hidden="true">Dashboard build 1.9</div>
+  <div class="build-version" aria-hidden="true">Dashboard build 2.0</div>
 </body>
 </html>
