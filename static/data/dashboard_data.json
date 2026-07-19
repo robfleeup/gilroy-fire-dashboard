@@ -1,0 +1,31 @@
+{
+  "2024": {
+    "incidents": 5024,
+    "start": "February 21, 2024",
+    "end": "December 31, 2024",
+    "end_iso": "2024-12-31",
+    "days": 315,
+    "average_per_day": 15.9,
+    "ems_dispatches": 3439,
+    "ems_percent": 68.5,
+    "latest_day_incidents": 13,
+    "latest_month_incidents": 563
+  },
+  "2026": {
+    "incidents": 3494,
+    "start": "January 1, 2026",
+    "end": "July 15, 2026",
+    "end_iso": "2026-07-15",
+    "days": 196,
+    "average_per_day": 17.8,
+    "ems_dispatches": 2626,
+    "ems_percent": 75.2,
+    "latest_day_incidents": 12,
+    "latest_month_incidents": 293
+  },
+  "notes": {
+    "2024": "Partial reporting period; First Due export begins February 21, 2024.",
+    "2026": "Year-to-date export through July 15, 2026.",
+    "apparatus_responses": "Not available in these incident-level exports."
+  }
+}

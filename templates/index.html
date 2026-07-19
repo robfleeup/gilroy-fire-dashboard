@@ -10,11 +10,13 @@
 <body>
   <header class="hero" aria-label="Gilroy Fire Operations">
     <div class="hero-slides" aria-hidden="true">
-      <div class="hero-slide is-active" style="background-image:url('{{ url_for('static', filename='images/hero-02.jpeg') }}')"></div>
+      <div class="hero-slide is-active" style="background-image:url('{{ url_for('static', filename='images/hero-01.jpg') }}')"></div>
+      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-02.jpg') }}')"></div>
       <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-03.jpg') }}')"></div>
       <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-04.jpg') }}')"></div>
       <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-05.jpg') }}')"></div>
       <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-06.jpg') }}')"></div>
+      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-07.jpg') }}')"></div>
     </div>
     <div class="hero-shade"></div>
 
@@ -46,6 +48,8 @@
       <button class="slide-dot" type="button" aria-label="Show image 3"></button>
       <button class="slide-dot" type="button" aria-label="Show image 4"></button>
       <button class="slide-dot" type="button" aria-label="Show image 5"></button>
+      <button class="slide-dot" type="button" aria-label="Show image 6"></button>
+      <button class="slide-dot" type="button" aria-label="Show image 7"></button>
     </div>
   </header>
 
@@ -65,24 +69,24 @@
 <section class="overview-banner">
       <div>
         <p class="section-kicker">Department Activity</p>
-        <h2>2026 Emergency Response</h2>
+        <h2>2026 Emergency Response <small class="data-through">Through July 15</small></h2>
       </div>
       <div class="reporting-status">
         <span class="status-dot"></span>
         <div>
-          <strong>Dashboard foundation active</strong>
-          <small>Operational data will be added one verified source at a time.</small>
+          <strong>First Due incident data loaded</strong>
+          <small>3,494 incidents through July 15, 2026.</small>
         </div>
       </div>
     </section>
 
     <section class="kpi-grid" aria-label="2026 emergency response activity">
-      <article class="kpi-card"><div class="kpi-icon">01</div><span>Emergency Incidents YTD</span><strong>—</strong><small>Total incidents since January 1</small></article>
-      <article class="kpi-card"><div class="kpi-icon">02</div><span>Incidents This Month</span><strong>—</strong><small>Emergency incidents during the current month</small></article>
-      <article class="kpi-card live-card"><div class="kpi-icon">LIVE</div><span>Incidents Today</span><strong>—</strong><small>Emergency incidents reported today</small></article>
-      <article class="kpi-card"><div class="kpi-icon">04</div><span>Average Incidents Per Day</span><strong>—</strong><small>Average daily emergency workload</small></article>
-      <article class="kpi-card"><div class="kpi-icon">05</div><span>EMS Incidents</span><strong>—</strong><small>Share of incidents involving medical care</small></article>
-      <article class="kpi-card"><div class="kpi-icon">06</div><span>Apparatus Responses</span><strong>—</strong><small>Total responses by Gilroy Fire units</small></article>
+      <article class="kpi-card"><div class="kpi-icon">01</div><span>Emergency Incidents YTD</span><strong>3,494</strong><small>January 1 through July 15, 2026</small></article>
+      <article class="kpi-card"><div class="kpi-icon">02</div><span>Incidents in July</span><strong>293</strong><small>July 1 through July 15</small></article>
+      <article class="kpi-card"><div class="kpi-icon">DATE</div><span>Incidents on July 15</span><strong>12</strong><small>Most recent date in the uploaded export</small></article>
+      <article class="kpi-card"><div class="kpi-icon">04</div><span>Average Incidents Per Day</span><strong>17.8</strong><small>Average across the available 2026 period</small></article>
+      <article class="kpi-card"><div class="kpi-icon">05</div><span>Medical-Related Dispatches</span><strong>2,626</strong><small>75.2% identified from dispatch-type labels</small></article>
+      <article class="kpi-card"><div class="kpi-icon">06</div><span>Apparatus Responses</span><strong>N/A</strong><small>Not included in this incident-level export</small></article>
     </section>
 
 
@@ -203,7 +207,7 @@
             Year-to-year information will be compared only where the reporting periods and data sources support a fair comparison.
           </p>
         </div>
-        <span class="source-badge">First Due RMS</span>
+        <span class="source-badge">First Due RMS · Uploaded Exports</span>
       </div>
 
       <div class="history-years">
@@ -212,8 +216,8 @@
             <strong>2024</strong>
             <span>Partial Reporting Year</span>
           </div>
-          <div class="history-value">—</div>
-          <p>First Due RMS was not active for the full calendar year. This year provides historical context but will not be presented as a complete annual total.</p>
+          <div class="history-value">5,024 incidents</div>
+          <p>Partial First Due export covering February 21 through December 31, 2024. This is not a complete calendar-year total.</p>
         </article>
 
         <article class="history-year">
@@ -228,10 +232,10 @@
         <article class="history-year current-year">
           <div class="year-line">
             <strong>2026</strong>
-            <span>Year to Date</span>
+            <span>Year to Date · Through July 15</span>
           </div>
-          <div class="history-value">—</div>
-          <p>Current-year activity will be compared with the same date range in prior years whenever the available data supports it.</p>
+          <div class="history-value">3,494 incidents</div>
+          <p>Current First Due export covering January 1 through July 15, 2026, averaging 17.8 incidents per day.</p>
         </article>
       </div>
 
