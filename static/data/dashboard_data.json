@@ -1,6 +1,6 @@
 {
   "2024": {
-    "incidents": 5024,
+    "incidents": 5032,
     "start": "February 21, 2024",
     "end": "December 31, 2024",
     "end_iso": "2024-12-31",
@@ -9,7 +9,9 @@
     "ems_dispatches": 3439,
     "ems_percent": 68.5,
     "latest_day_incidents": 13,
-    "latest_month_incidents": 563
+    "latest_month_incidents": 563,
+    "unit_responses": 5018,
+    "average_units_per_incident": 1.0
   },
   "2026": {
     "incidents": 3544,
@@ -22,11 +24,23 @@
     "ems_percent": 78.6,
     "latest_day_incidents": 19,
     "latest_month_incidents": 347,
-    "unit_responses": 4510
+    "unit_responses": 4510,
+    "average_units_per_incident": 1.27
   },
   "notes": {
     "2024": "Partial reporting period; First Due export begins February 21, 2024.",
     "2026": "Year-to-date master export through July 18, 2026.",
-    "apparatus_responses": "Gilroy unit responses are calculated from the DISPATCH UNITS column for the listed department units."
+    "apparatus_responses": "Gilroy unit responses are calculated from the DISPATCH UNITS column for the listed department units.",
+    "annual_workload": "Annual incident and Gilroy unit-response totals are calculated from the master First Due export. 2024 is partial."
+  },
+  "2025": {
+    "incidents": 7082,
+    "start": "January 1, 2025",
+    "end": "December 31, 2025",
+    "end_iso": "2025-12-31",
+    "days": 365,
+    "average_per_day": 19.4,
+    "unit_responses": 8802,
+    "average_units_per_incident": 1.24
   }
 }
