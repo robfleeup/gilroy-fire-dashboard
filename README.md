@@ -1,3 +1,15 @@
+# Gilroy Fire Operations Dashboard — Version 1.7
+
+This version replaces monthly unit activity with Last 90 Days and 2026 YTD.
+
+## Operational workload
+- 1,657 emergency incident records, April 19–July 17, 2026
+- 2,183 Gilroy unit responses for the displayed Gilroy units
+- 1.32 Gilroy units per incident
+- 2026 YTD unit values retained from the current First Due snapshot through July 15, 2026
+
+The 2,356 value previously discussed included units outside the displayed Gilroy unit list. The reconciled Gilroy-only total is 2,183.
+
 # Gilroy Fire Operations — Version 1.6.2
 
 This corrected Render-ready release restores the live unit-response tiles sourced from the public OurGilroy/PulsePoint feed. It includes individual cards for E47, E48, E49, E50, T47, RM49, E650, and Battalion Chiefs B47 through B50, with Today, Month, and YTD counts.

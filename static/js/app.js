@@ -21,32 +21,28 @@
 
   async function refreshUnitResponses(){
     try{
-      const r=await fetch('/api/metrics',{cache:'no-store'}); if(!r.ok) throw new Error('unit metrics unavailable');
+      const r=await fetch('/static/data/unit_workload_2026.json',{cache:'no-store'}); if(!r.ok) throw new Error('Unit workload snapshot unavailable');
       const d=await r.json();
-      set('unit-responses-today',d.summary?.today?.unit_responses ?? '—');
-      set('unit-responses-month',d.summary?.month?.unit_responses ?? '—');
-      set('unit-responses-ytd',d.summary?.ytd?.unit_responses ?? '—');
-      set('chief-responses-ytd',d.summary?.ytd?.chief_responses ?? '—');
-
-      const preferred=['E47','E48','E49','E50','T47','RM49','E650','B47','B48','B49','B50'];
-      const byId=new Map((d.units||[]).map(u=>[u.unit_id,u]));
-      const grid=document.getElementById('unit-response-grid');
-      if(!grid)return;
+      set('workload-incidents',(d.incident_records_90_day||0).toLocaleString());
+      set('workload-unit-responses',(d.gilroy_unit_responses_90_day||0).toLocaleString());
+      set('workload-average',Number(d.average_gilroy_units_per_incident||0).toFixed(2));
+      const units=d.units||{};
+      const preferred=['E48','E47','E49','RM49','B47','B48','B49','E650','T47','E50','B50','E348'];
+      const grid=document.getElementById('unit-response-grid'); if(!grid)return;
       grid.innerHTML=preferred.map(id=>{
-        const u=byId.get(id)||{unit_id:id,unit_type:id.startsWith('B')?'Chief Officer':id.startsWith('T')?'Truck':id.startsWith('RM')?'Rescue Medic':'Engine',today:0,month:0,ytd:0};
-        const label=u.unit_type==='Chief Officer'?'Battalion Chief':u.unit_type;
-        return `<article class="unit-response-card ${u.unit_type==='Chief Officer'?'chief-card':''}">
-          <div class="unit-card-head"><strong>${u.unit_id}</strong><span>${label}</span></div>
-          <div class="unit-periods">
-            <div><b>${u.today||0}</b><small>Today</small></div>
-            <div><b>${u.month||0}</b><small>Month</small></div>
-            <div><b>${u.ytd||0}</b><small>YTD</small></div>
+        const u=units[id]||{last_90_days:0,ytd:0};
+        const label=id.startsWith('B')?'Chief Officer':id.startsWith('T')?'Truck':id.startsWith('RM')?'Rescue Medic':id==='E650'?'Support Engine':id==='E348'?'Reserve Engine':'Engine';
+        return `<article class="unit-response-card ${id.startsWith('B')?'chief-card':''}">
+          <div class="unit-card-head"><strong>${id}</strong><span>${label}</span></div>
+          <div class="unit-periods two-periods">
+            <div><b>${(u.last_90_days||0).toLocaleString()}</b><small>Last 90 Days</small></div>
+            <div><b>${(u.ytd||0).toLocaleString()}</b><small>2026 YTD</small></div>
           </div>
         </article>`;
       }).join('');
     }catch(e){
       const grid=document.getElementById('unit-response-grid');
-      if(grid)grid.innerHTML='<div class="unit-loading">Unit response data is temporarily unavailable from the public feed.</div>';
+      if(grid)grid.innerHTML='<div class="unit-loading">Verified unit response activity could not be loaded.</div>';
     }
   }
   async function refreshWeather(){

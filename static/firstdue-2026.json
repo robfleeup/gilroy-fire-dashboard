@@ -1,0 +1,259 @@
+{
+  "source": "First Due incident report export",
+  "as_of": "2026-07-15T19:08:23",
+  "year": 2026,
+  "total_incidents": 3494,
+  "incidents_today": 12,
+  "incidents_month": 293,
+  "average_daily": 17.8,
+  "medical_count": 2475,
+  "medical_percent": 70.8,
+  "authorized_reports": 3424,
+  "authorized_percent": 98.0,
+  "missing_first_arriving": 495,
+  "first_arriving": {
+    "E47": {
+      "today": 4,
+      "month": 81,
+      "ytd": 979
+    },
+    "E48": {
+      "today": 3,
+      "month": 88,
+      "ytd": 1130
+    },
+    "E49": {
+      "today": 2,
+      "month": 40,
+      "ytd": 504
+    },
+    "E50": {
+      "today": 0,
+      "month": 7,
+      "ytd": 109
+    },
+    "RM49": {
+      "today": 0,
+      "month": 22,
+      "ytd": 165
+    },
+    "E650": {
+      "today": 0,
+      "month": 1,
+      "ytd": 25
+    },
+    "T47": {
+      "today": 0,
+      "month": 0,
+      "ytd": 45
+    },
+    "B47": {
+      "today": 0,
+      "month": 3,
+      "ytd": 16
+    },
+    "B48": {
+      "today": 0,
+      "month": 3,
+      "ytd": 16
+    },
+    "B49": {
+      "today": 0,
+      "month": 0,
+      "ytd": 5
+    },
+    "B50": {
+      "today": 0,
+      "month": 0,
+      "ytd": 1
+    }
+  },
+  "monthly": [
+    {
+      "month": "2026-01",
+      "count": 511
+    },
+    {
+      "month": "2026-02",
+      "count": 531
+    },
+    {
+      "month": "2026-03",
+      "count": 516
+    },
+    {
+      "month": "2026-04",
+      "count": 541
+    },
+    {
+      "month": "2026-05",
+      "count": 548
+    },
+    {
+      "month": "2026-06",
+      "count": 554
+    },
+    {
+      "month": "2026-07",
+      "count": 293
+    }
+  ],
+  "hourly": [
+    {
+      "hour": 0,
+      "count": 114
+    },
+    {
+      "hour": 1,
+      "count": 96
+    },
+    {
+      "hour": 2,
+      "count": 84
+    },
+    {
+      "hour": 3,
+      "count": 74
+    },
+    {
+      "hour": 4,
+      "count": 66
+    },
+    {
+      "hour": 5,
+      "count": 68
+    },
+    {
+      "hour": 6,
+      "count": 81
+    },
+    {
+      "hour": 7,
+      "count": 100
+    },
+    {
+      "hour": 8,
+      "count": 143
+    },
+    {
+      "hour": 9,
+      "count": 157
+    },
+    {
+      "hour": 10,
+      "count": 197
+    },
+    {
+      "hour": 11,
+      "count": 183
+    },
+    {
+      "hour": 12,
+      "count": 193
+    },
+    {
+      "hour": 13,
+      "count": 175
+    },
+    {
+      "hour": 14,
+      "count": 182
+    },
+    {
+      "hour": 15,
+      "count": 171
+    },
+    {
+      "hour": 16,
+      "count": 193
+    },
+    {
+      "hour": 17,
+      "count": 194
+    },
+    {
+      "hour": 18,
+      "count": 184
+    },
+    {
+      "hour": 19,
+      "count": 217
+    },
+    {
+      "hour": 20,
+      "count": 174
+    },
+    {
+      "hour": 21,
+      "count": 175
+    },
+    {
+      "hour": 22,
+      "count": 144
+    },
+    {
+      "hour": 23,
+      "count": 129
+    }
+  ],
+  "top_types": [
+    {
+      "type": "Medical Event",
+      "count": 2387
+    },
+    {
+      "type": "Public Service Lift Assist",
+      "count": 117
+    },
+    {
+      "type": "Alarm - Smoke Detector",
+      "count": 92
+    },
+    {
+      "type": "General Fire Alarm",
+      "count": 89
+    },
+    {
+      "type": "Auto Aid Medical Aid",
+      "count": 88
+    },
+    {
+      "type": "Auto Aid Vehicle Accident",
+      "count": 76
+    },
+    {
+      "type": "Smoke Invest",
+      "count": 74
+    },
+    {
+      "type": "Vehicle Accident With Injuries",
+      "count": 62
+    },
+    {
+      "type": "Vehicle Accident With Minor Injuries",
+      "count": 49
+    },
+    {
+      "type": "Vegetation Fire",
+      "count": 46
+    }
+  ],
+  "report_status": [
+    {
+      "status": "Authorized",
+      "count": 3424
+    },
+    {
+      "status": "Incomplete",
+      "count": 38
+    },
+    {
+      "status": "Not Started",
+      "count": 29
+    },
+    {
+      "status": "Pending Authorization",
+      "count": 3
+    }
+  ]
+}

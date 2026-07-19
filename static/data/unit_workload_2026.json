@@ -1,0 +1,58 @@
+{
+  "source_90_day": "First Due dispatch export",
+  "period_start": "2026-04-19",
+  "period_end": "2026-07-17",
+  "incident_records_90_day": 1657,
+  "gilroy_unit_responses_90_day": 2183,
+  "average_gilroy_units_per_incident": 1.32,
+  "units": {
+    "E47": {
+      "last_90_days": 623,
+      "ytd": 979
+    },
+    "E48": {
+      "last_90_days": 731,
+      "ytd": 1130
+    },
+    "E49": {
+      "last_90_days": 423,
+      "ytd": 504
+    },
+    "E50": {
+      "last_90_days": 16,
+      "ytd": 109
+    },
+    "T47": {
+      "last_90_days": 30,
+      "ytd": 45
+    },
+    "RM49": {
+      "last_90_days": 192,
+      "ytd": 165
+    },
+    "E650": {
+      "last_90_days": 34,
+      "ytd": 25
+    },
+    "E348": {
+      "last_90_days": 2,
+      "ytd": 0
+    },
+    "B47": {
+      "last_90_days": 48,
+      "ytd": 16
+    },
+    "B48": {
+      "last_90_days": 42,
+      "ytd": 16
+    },
+    "B49": {
+      "last_90_days": 37,
+      "ytd": 5
+    },
+    "B50": {
+      "last_90_days": 5,
+      "ytd": 1
+    }
+  }
+}
