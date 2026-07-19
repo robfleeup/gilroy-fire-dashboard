@@ -10,8 +10,7 @@
 <body>
   <header class="hero" aria-label="Gilroy Fire Operations">
     <div class="hero-slides" aria-hidden="true">
-      <div class="hero-slide is-active" style="background-image:url('{{ url_for('static', filename='images/hero-01.jpeg') }}')"></div>
-      <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-02.jpeg') }}')"></div>
+      <div class="hero-slide is-active" style="background-image:url('{{ url_for('static', filename='images/hero-02.jpeg') }}')"></div>
       <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-03.jpg') }}')"></div>
       <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-04.jpg') }}')"></div>
       <div class="hero-slide" style="background-image:url('{{ url_for('static', filename='images/hero-05.jpg') }}')"></div>
@@ -47,24 +46,23 @@
       <button class="slide-dot" type="button" aria-label="Show image 3"></button>
       <button class="slide-dot" type="button" aria-label="Show image 4"></button>
       <button class="slide-dot" type="button" aria-label="Show image 5"></button>
-      <button class="slide-dot" type="button" aria-label="Show image 6"></button>
     </div>
   </header>
 
   <main>
 
-<section class="panel">
-<div class="stats-strip">
-<div class="quick-stat"><span>Population Protected</span><strong>~60,000</strong></div>
-<div class="quick-stat"><span>Stations</span><strong>3</strong></div>
-<div class="quick-stat"><span>Frontline Engines</span><strong>4</strong></div>
-<div class="quick-stat"><span>ALS First Response</span><strong>Citywide</strong></div>
-<div class="quick-stat"><span>2025 Incidents</span><strong>7,014</strong></div>
-<div class="quick-stat"><span>Average Daily</span><strong>19.2</strong></div>
-</div>
-</section>
+    <section class="panel">
+      <div class="stats-strip">
+        <div class="quick-stat"><span>Population Protected</span><strong>~60,000</strong></div>
+        <div class="quick-stat"><span>Service Area</span><strong>~16 sq. mi.</strong></div>
+        <div class="quick-stat"><span>Fire Stations</span><strong>3</strong></div>
+        <div class="quick-stat"><span>Engine Companies</span><strong>3 Frontline</strong></div>
+        <div class="quick-stat"><span>Truck Company</span><strong>Cross-Staffed</strong></div>
+        <div class="quick-stat"><span>ALS First Response</span><strong>Citywide</strong></div>
+      </div>
+    </section>
 
-    <section class="overview-banner">
+<section class="overview-banner">
       <div>
         <p class="section-kicker">Department Activity</p>
         <h2>2026 Emergency Response</h2>
@@ -175,21 +173,22 @@
 
       <aside class="panel readiness-panel">
         <div class="readiness-header">
-          <p class="section-kicker">Resources</p>
+          <p class="section-kicker">Department Capabilities</p>
           <h2>Resources serving the community</h2>
-          <p>Future live status of primary Gilroy Fire response resources.</p>
+          <p>Gilroy Fire provides all-hazards emergency response across approximately 16 square miles.</p>
         </div>
 
         <div class="readiness-list">
-          <div class="readiness-row"><span class="resource-mark">E</span><div><strong>Fire Engines</strong><small>Emergency response and fire suppression</small></div><b>—</b></div>
-          <div class="readiness-row"><span class="resource-mark">T</span><div><strong>Truck Company</strong><small>Aerial, rescue, and specialized operations</small></div><b>—</b></div>
-          <div class="readiness-row"><span class="resource-mark">M</span><div><strong>Rescue Medic</strong><small>Advanced medical response capability</small></div><b>—</b></div>
-          <div class="readiness-row"><span class="resource-mark">BC</span><div><strong>Battalion Chief</strong><small>Incident command and operational oversight</small></div><b>—</b></div>
+          <div class="readiness-row"><span class="resource-mark">E</span><div><strong>Engine Companies</strong><small>Frontline fire suppression and emergency response</small></div><b>3</b></div>
+          <div class="readiness-row"><span class="resource-mark">T</span><div><strong>Truck Company</strong><small>Aerial, rescue, and specialized capability</small></div><b>Cross-Staffed</b></div>
+          <div class="readiness-row"><span class="resource-mark">M</span><div><strong>Rescue Medic</strong><small>Advanced medical response capability</small></div><b>1</b></div>
+          <div class="readiness-row"><span class="resource-mark">ALS</span><div><strong>ALS First Response</strong><small>Paramedic-level care throughout the city</small></div><b>Citywide</b></div>
+          <div class="readiness-row"><span class="resource-mark">AA</span><div><strong>Automatic Aid</strong><small>Closest-resource regional response</small></div><b>Regional</b></div>
         </div>
 
         <div class="readiness-note">
-          <strong>Why this matters</strong>
-          <p>Resource status helps explain how the department is meeting simultaneous calls and maintaining citywide coverage.</p>
+          <strong>Operational accuracy</strong>
+          <p>Truck 47 is cross-staffed and does not represent a separately staffed company in addition to the three engine companies.</p>
         </div>
       </aside>
     </section>
@@ -220,9 +219,9 @@
         <article class="history-year">
           <div class="year-line">
             <strong>2025</strong>
-            <span>Full Reporting Year</span>
+            <span>First Complete Reporting Year</span>
           </div>
-          <div class="history-value">—</div>
+          <div class="history-value">7,014 incidents</div>
           <p>The first complete calendar-year baseline for annual incident activity and workload comparisons.</p>
         </article>
 

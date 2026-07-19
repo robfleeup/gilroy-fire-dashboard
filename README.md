@@ -1,18 +1,12 @@
-Version 1.3 - Data Population
+# Gilroy Fire Operations — Version 1.4
 
-Changes:
-- Removed computer image reference from hero rotation/template where present.
-- Simplified section titles:
-  * Current Operations
-  * Resources
-  * Response Trends
-  * About This Dashboard
-- Added quick department statistics strip:
-  * Population ~60,000
-  * 3 Stations
-  * 4 Frontline Engines
-  * Citywide ALS First Response
-  * 7,014 incidents (2025)
-  * 19.2 average incidents/day
+This release populates the dashboard with verified 2025 department activity and operationally accurate department capabilities.
 
-Next version will connect live PulsePoint and First Due data instead of static values.
+## Updates
+- Removed the computer-screen hero image
+- Corrected frontline deployment to three engine companies
+- Identified Truck 47 as one cross-staffed truck company
+- Added verified 2025 activity: 7,014 incidents, 5,050 EMS incidents, 8,963 unit responses, 72% EMS workload, and 19.2 average daily incidents
+- Updated the 2025 response-trend baseline
+
+Run locally with `python app.py`, or deploy using the included Render configuration.
