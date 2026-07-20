@@ -1,53 +1,17 @@
-# Gilroy Fire Operations Dashboard — Version 1.9
+# Gilroy Fire Operations Dashboard — Clean Rebuild
 
-This version replaces monthly unit activity with Last 90 Days and 2026 YTD.
+This repository was rebuilt from a blank folder. Only verified department data and image assets were carried forward.
 
-## Operational workload
-- 1,657 emergency incident records, April 19–July 17, 2026
-- 2,183 Gilroy unit responses for the displayed Gilroy units
-- 1.32 Gilroy units per incident
-- 2026 YTD unit values retained from the current First Due snapshot through July 15, 2026
+## Deploy to Render
+1. Replace the contents of the GitHub repository with every file and folder in this package.
+2. Commit the replacement.
+3. In Render, choose **Manual Deploy → Clear build cache & deploy**.
+4. The health check is `/health`.
 
-The 2,356 value previously discussed included units outside the displayed Gilroy unit list. The reconciled Gilroy-only total is 2,183.
+## Editable data
+- Historical metrics and unit tiles: `data/historical.json`
+- Mutual aid: `aid_received_ytd` and `aid_given_ytd`
+- Deployments: `deployments` array
 
-# Gilroy Fire Operations — Version 1.6.2
-
-This corrected Render-ready release restores the live unit-response tiles sourced from the public OurGilroy/PulsePoint feed. It includes individual cards for E47, E48, E49, E50, T47, RM49, E650, and Battalion Chiefs B47 through B50, with Today, Month, and YTD counts.
-
-The Flask entry point remains `app = Flask(__name__)`, compatible with `gunicorn app:app`.
-
-# Gilroy Fire Operations — Version 1.6.1 Render Fix
-
-This package preserves the Version 1.6 dashboard and live-data features while fixing the Render/Gunicorn startup error.
-
-## Render settings
-- Build command: `pip install -r requirements.txt`
-- Start command: `gunicorn app:app`
-- Health check: `/health`
-
-The Flask application object is now consistently named `app`, matching the Render start command.
-
-## Safe update rule
-Keep `app.py`, `requirements.txt`, and `render.yaml` as the stable backend. Future routine updates should normally be limited to:
-- `templates/`
-- `static/`
-- `data/`
-
-## Included data and features
-- Live OurGilroy incident-feed integration
-- Current operations tiles
-- NWS weather and alerts
-- Vegetation-fire activity
-- Watch Duty and Smoke Ready California links
-- 2024 partial and 2026 YTD First Due exports
-- Uploaded GFD incident photographs
-
-
-## Version 1.9 data refresh
-- Master export through July 18, 2026
-- 2026 YTD incidents: 3,544
-- 2026 YTD Gilroy unit responses: 4,510
-- Last 90 days (2026-04-20 through 2026-07-18): 1,654 incidents and 2,178 Gilroy unit responses
-- Unit activity is a manual snapshot and changes only when a new First Due export is added and the dashboard is redeployed.
-
-- Added annual Gilroy unit-response totals and average units per incident for 2024 partial, 2025, and 2026 YTD.
+## Live sources
+The backend tries the public PulsePoint endpoint first and then the OurGilroy public incident feed as a fallback. Weather and alerts use the National Weather Service.

@@ -3,6 +3,6 @@ services:
     name: gilroy-fire-operations
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    startCommand: gunicorn app:APP --bind 0.0.0.0:$PORT --workers 1 --timeout 60
     healthCheckPath: /health
     autoDeploy: true
