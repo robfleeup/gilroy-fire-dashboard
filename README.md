@@ -15,3 +15,20 @@ This repository was rebuilt from a blank folder. Only verified department data a
 
 ## Live sources
 The backend tries the public PulsePoint endpoint first and then the OurGilroy public incident feed as a fallback. Weather and alerts use the National Weather Service.
+
+## Interactive 2025 Annual Report
+
+The dashboard now includes a dedicated annual report viewer at:
+
+```text
+/annual-report
+```
+
+Features include all 28 report slides, chapter navigation, full-screen viewing, keyboard controls, touch swiping, mouse-wheel navigation, and a printable PDF. The viewer deliberately displays exported PowerPoint page 2 first because that page is the designed cover; the original deck stores the Chapter 01 divider as page 1.
+
+Annual report assets are located in:
+
+```text
+static/annual-report/slides/
+static/reports/
+```

@@ -1,0 +1,123 @@
+(() => {
+  'use strict';
+  const config = window.ANNUAL_REPORT_CONFIG;
+  const order = config.order;
+  const image = document.getElementById('slide-image');
+  const loading = document.getElementById('loading');
+  const previous = document.getElementById('previous-button');
+  const next = document.getElementById('next-button');
+  const previousText = document.getElementById('previous-text');
+  const nextText = document.getElementById('next-text');
+  const counter = document.getElementById('slide-counter');
+  const chapterName = document.getElementById('chapter-name');
+  const range = document.getElementById('slide-range');
+  const panel = document.getElementById('chapter-panel');
+  const shade = document.getElementById('panel-shade');
+  const menuButton = document.getElementById('menu-button');
+  const closeMenu = document.getElementById('close-menu');
+  const fullScreen = document.getElementById('fullscreen-button');
+  const chapterButtons = [...document.querySelectorAll('#chapters button')];
+
+  const chapters = [
+    {start:0,name:'Cover'}, {start:1,name:'Who We Are'}, {start:4,name:'Community Demand'},
+    {start:8,name:'Response Performance'}, {start:12,name:'When Demand Overlaps'},
+    {start:16,name:'Where Resources Work'}, {start:21,name:'Maintaining Readiness'},
+    {start:25,name:'2026 Priorities'}, {start:27,name:'Conclusion'}
+  ];
+  let index = Math.max(0, Math.min(order.length - 1, Number(new URLSearchParams(location.search).get('slide') || 1) - 1));
+  let touchStartX = 0;
+  let wheelLocked = false;
+
+  const filename = (page) => `${config.slideBase}page-${String(page).padStart(2,'0')}.png`;
+  const currentChapter = () => [...chapters].reverse().find(ch => index >= ch.start) || chapters[0];
+
+  function preload(position) {
+    if (position < 0 || position >= order.length) return;
+    const preloadImage = new Image();
+    preloadImage.src = filename(order[position]);
+  }
+
+  function updateHistory() {
+    const url = new URL(location.href);
+    url.searchParams.set('slide', String(index + 1));
+    history.replaceState(null, '', url);
+  }
+
+  function render(animate = true) {
+    if (animate) image.classList.add('fade-out');
+    loading.hidden = false;
+    const source = filename(order[index]);
+    const commit = () => {
+      image.src = source;
+      image.alt = `Gilroy Fire Department 2025 Annual Performance Report, slide ${index + 1} of ${order.length}`;
+    };
+    window.setTimeout(commit, animate ? 100 : 0);
+    counter.textContent = `${index + 1} of ${order.length}`;
+    range.value = String(index + 1);
+    chapterName.textContent = currentChapter().name;
+    previous.disabled = previousText.disabled = index === 0;
+    next.disabled = nextText.disabled = index === order.length - 1;
+    chapterButtons.forEach(button => button.classList.toggle('active', Number(button.dataset.slide) === currentChapter().start));
+    updateHistory();
+    preload(index + 1); preload(index - 1);
+  }
+
+  image.addEventListener('load', () => {
+    loading.hidden = true;
+    image.classList.remove('fade-out');
+    image.classList.add('ready');
+  });
+  image.addEventListener('error', () => {
+    loading.hidden = false;
+    loading.textContent = 'This slide could not be loaded.';
+  });
+
+  function go(position) {
+    const target = Math.max(0, Math.min(order.length - 1, position));
+    if (target === index) return;
+    index = target;
+    render(true);
+  }
+  const goNext = () => go(index + 1);
+  const goPrevious = () => go(index - 1);
+
+  [next, nextText].forEach(button => button.addEventListener('click', goNext));
+  [previous, previousText].forEach(button => button.addEventListener('click', goPrevious));
+  range.addEventListener('input', event => go(Number(event.target.value) - 1));
+
+  function openPanel() { panel.classList.add('open'); shade.classList.add('open'); }
+  function closePanel() { panel.classList.remove('open'); shade.classList.remove('open'); }
+  menuButton.addEventListener('click', openPanel);
+  closeMenu.addEventListener('click', closePanel);
+  shade.addEventListener('click', closePanel);
+  chapterButtons.forEach(button => button.addEventListener('click', () => { go(Number(button.dataset.slide)); closePanel(); }));
+
+  fullScreen.addEventListener('click', async () => {
+    try {
+      if (!document.fullscreenElement) await document.documentElement.requestFullscreen();
+      else await document.exitFullscreen();
+    } catch (_) {}
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') { event.preventDefault(); goNext(); }
+    if (event.key === 'ArrowLeft' || event.key === 'PageUp') { event.preventDefault(); goPrevious(); }
+    if (event.key === 'Home') go(0);
+    if (event.key === 'End') go(order.length - 1);
+    if (event.key === 'Escape') closePanel();
+  });
+
+  document.getElementById('viewer').addEventListener('touchstart', event => { touchStartX = event.changedTouches[0].screenX; }, {passive:true});
+  document.getElementById('viewer').addEventListener('touchend', event => {
+    const difference = event.changedTouches[0].screenX - touchStartX;
+    if (Math.abs(difference) > 55) difference < 0 ? goNext() : goPrevious();
+  }, {passive:true});
+  document.getElementById('viewer').addEventListener('wheel', event => {
+    if (wheelLocked || Math.abs(event.deltaY) < 30) return;
+    wheelLocked = true;
+    event.deltaY > 0 ? goNext() : goPrevious();
+    window.setTimeout(() => wheelLocked = false, 650);
+  }, {passive:true});
+
+  render(false);
+})();
