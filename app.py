@@ -13,8 +13,15 @@ from flask import Flask, jsonify, render_template
 APP = Flask(__name__)
 BASE_DIR = Path(__file__).resolve().parent
 DATA_FILE = BASE_DIR / "data" / "historical.json"
-PULSEPOINT_URL = os.getenv("PULSEPOINT_URL", "https://api.pulsepoint.org/v1/webapp?resource=incidents&agencyid=43010")
-FALLBACK_URL = os.getenv("FALLBACK_URL", "https://ourgilroy.com/api/fire.php")
+PULSEPOINT_URL = os.getenv(
+    "PULSEPOINT_URL",
+    "https://ourgilroy.com/api/fire.php?view=incidents"
+)
+
+FALLBACK_URL = os.getenv(
+    "FALLBACK_URL",
+    "https://ourgilroy.com/api/fire.php?view=incidents"
+)
 LAT, LON = 37.0058, -121.5683
 
 
