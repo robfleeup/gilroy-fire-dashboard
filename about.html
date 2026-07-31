@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About GFD | Gilroy Fire Department</title>
+  <link rel="icon" href="/gfd-logo.jpg">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    body{margin:0;background:#f3f1ec;color:#10283f}
+    .about-shell{max-width:1220px;margin:0 auto;padding:30px 22px 55px}
+    .about-hero{display:grid;grid-template-columns:170px 1fr;gap:26px;align-items:center;background:#10283f;color:#fff;border-radius:20px;padding:30px;box-shadow:0 12px 30px rgba(12,35,55,.18)}
+    .about-hero img{width:160px;background:#fff;border-radius:14px;padding:7px}
+    .about-hero h1{font-size:36px;margin:0 0 10px}
+    .about-hero p{font-size:17px;line-height:1.55;margin:0}
+    .section-heading{margin:32px 0 14px}
+    .section-heading h2{margin:0 0 5px;font-size:30px}
+    .section-heading p{margin:0;color:#657282}
+    .station-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .station-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 28px rgba(12,35,55,.12)}
+    .station-photo{width:100%;height:260px;object-fit:cover;display:block}
+    .station-body{padding:22px}
+    .station-body h3{margin:0 0 5px;font-size:24px}
+    .station-address{color:#6a7786;font-size:14px;margin-bottom:14px}
+    .apparatus-label{font-weight:800;color:#8b1e24;text-transform:uppercase;letter-spacing:.08em;font-size:12px}
+    .apparatus-list{display:flex;flex-wrap:wrap;gap:8px;margin:9px 0 14px}
+    .apparatus-list span{background:#10283f;color:#fff;border-radius:999px;padding:7px 11px;font-size:13px;font-weight:700}
+    .station-body p{color:#526171;line-height:1.55}
+    #interim-map{height:260px;width:100%;background:#dfe5ea}
+    .fleet-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}
+    .fleet-stat{background:#fff;border-radius:14px;padding:20px;box-shadow:0 8px 22px rgba(12,35,55,.09)}
+    .fleet-stat strong{display:block;font-size:29px;color:#8b1e24}
+    .fleet-stat span{display:block;color:#5c6875;margin-top:5px}
+    .operations-note{margin-top:24px;padding:18px;background:#fff;border-left:6px solid #8b1e24;border-radius:10px;line-height:1.55;color:#526171}
+    @media(max-width:850px){.station-grid{grid-template-columns:1fr}.fleet-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:620px){.about-shell{padding:16px 10px 38px}.about-hero{grid-template-columns:1fr;text-align:center}.about-hero img{margin:auto}.fleet-grid{grid-template-columns:1fr}.station-photo,#interim-map{height:220px}}
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <div class="identity"><img src="/gfd-logo.jpg" alt="Gilroy Fire Department logo"><div><div class="department">Gilroy Fire Department</div><div class="subtitle">Performance Dashboard</div></div></div>
+</header>
+<nav class="nav"><a href="/">Dashboard</a><a href="/incident-map">2025 Incident Map</a><a href="/aid-map">Regional Aid Map</a><a href="/annual-report">Annual Report</a><a href="/about">About GFD</a></nav>
+
+<main class="about-shell">
+  <section class="about-hero">
+    <img src="/gfd-logo.jpg" alt="Gilroy Fire Department logo">
+    <div>
+      <h1>About Gilroy Fire Department</h1>
+      <p>Gilroy Fire Department provides all-hazards emergency response, emergency medical services, fire suppression, rescue, community risk reduction, and regional mutual aid from three permanent fire stations and one interim response facility.</p>
+    </div>
+  </section>
+
+  <div class="section-heading"><h2>Meet Your Fire Stations</h2><p>Typical frontline assignments are shown below and may vary with staffing and operational needs.</p></div>
+
+  <section class="station-grid">
+    <article class="station-card">
+      <img class="station-photo" src="/station-chestnut.png" alt="Chestnut Fire Station">
+      <div class="station-body">
+        <h3>Station 47 — Chestnut</h3>
+        <div class="station-address">7070 Chestnut Street</div>
+        <div class="apparatus-label">Typical Apparatus</div>
+        <div class="apparatus-list"><span>Engine 47</span><span>Truck 47</span><span>Battalion 47</span></div>
+        <p>Headquarters station serving central Gilroy and housing the department's truck company and Battalion 47.</p>
+      </div>
+    </article>
+
+    <article class="station-card">
+      <img class="station-photo" src="/station-las-animas.png" alt="Las Animas Fire Station">
+      <div class="station-body">
+        <h3>Station 48 — Las Animas</h3>
+        <div class="station-address">8383 Wren Avenue</div>
+        <div class="apparatus-label">Typical Apparatus</div>
+        <div class="apparatus-list"><span>Engine 48</span></div>
+        <p>Primary response station serving south Gilroy and surrounding neighborhoods.</p>
+      </div>
+    </article>
+
+    <article class="station-card">
+      <img class="station-photo" src="/station-sunrise.jpg" alt="Sunrise Fire Station">
+      <div class="station-body">
+        <h3>Station 49 — Sunrise</h3>
+        <div class="station-address">880 Sunrise Drive</div>
+        <div class="apparatus-label">Typical Apparatus</div>
+        <div class="apparatus-list"><span>Engine 49</span></div>
+        <p>Primary response station serving east Gilroy and surrounding residential and commercial areas.</p>
+      </div>
+    </article>
+
+    <article class="station-card">
+      <div id="interim-map" aria-label="Map showing the Santa Teresa Interim Fire Station"></div>
+      <div class="station-body">
+        <h3>Santa Teresa Interim Fire Station</h3>
+        <div class="station-address">Southwest Gilroy interim response location</div>
+        <div class="apparatus-label">Flexible Assignment</div>
+        <div class="apparatus-list"><span>Engine 50</span><span>Engine 650</span><span>Rescue Medic 49</span></div>
+        <p>The interim station provides fire and emergency medical response to southwest Gilroy while the permanent Santa Teresa Fire Station is under construction. Depending on daily staffing availability and operational needs, the station may be staffed with Engine 50, Engine 650, or Rescue Medic 49, providing flexible deployment to meet community demand and maintain citywide coverage.</p>
+      </div>
+    </article>
+  </section>
+
+  <div class="section-heading"><h2>Fleet at a Glance</h2></div>
+  <section class="fleet-grid">
+    <div class="fleet-stat"><strong>3</strong><span>Permanent fire stations</span></div>
+    <div class="fleet-stat"><strong>1</strong><span>Interim fire station</span></div>
+    <div class="fleet-stat"><strong>10</strong><span>Frontline apparatus shown on the dashboard</span></div>
+    <div class="fleet-stat"><strong>2614</strong><span>CAL OES Type 6 engine</span></div>
+    <div class="fleet-stat"><strong>~60,000</strong><span>Residents served</span></div>
+  </section>
+
+  <div class="operations-note"><strong>Operational Note:</strong> Apparatus assignments may vary based on staffing availability, maintenance, wildfire deployments, training, and operational needs. Information shown reflects each station's typical frontline response resources. Battalion 49 does not currently have a permanent station assignment.</div>
+</main>
+
+<footer><img src="/gfd-logo.jpg" alt=""><div><b>Gilroy Fire Department</b><span>Performance • Transparency • Community Service</span></div></footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  const map=L.map('interim-map',{scrollWheelZoom:false}).setView([36.9964,-121.5834],14);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+  L.marker([36.9964,-121.5834]).addTo(map).bindPopup('<strong>Santa Teresa Interim Fire Station</strong><br>Southwest Gilroy').openPopup();
+</script>
+</body>
+</html>

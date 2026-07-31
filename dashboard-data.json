@@ -1,0 +1,44 @@
+{
+  "source": {
+    "unit_responses": "731 2026 unit responses.csv",
+    "incident_types": "IncidentCountbyPrimaryIncidentType_20260731234441.csv"
+  },
+  "updated": "2026-07-31 23:44",
+  "reporting": {
+    "year": 2026,
+    "as_of_date": "July 31, 2026",
+    "period": "January 1\u2013July 31, 2026"
+  },
+  "incidents": {
+    "ytd": 3761,
+    "average_daily": 17.7
+  },
+  "apparatus": {
+    "E47": 1457,
+    "E48": 1595,
+    "E49": 876,
+    "E50": 181,
+    "E650": 67,
+    "RM49": 327,
+    "T47": 78,
+    "B47": 99,
+    "B48": 87,
+    "B49": 71
+  },
+  "apparatus_response_total": 5026,
+  "call_types": {
+    "Fire": 188,
+    "Hazardous Situation": 117,
+    "Law Enforcement Support": 5,
+    "Medical": 2759,
+    "No Emergency": 400,
+    "Public Service": 280,
+    "Rescue": 12
+  },
+  "system_demand": {
+    "simultaneous_events": 770,
+    "two_at_once": 603,
+    "three_at_once": 135,
+    "four_or_more": 32
+  }
+}
