@@ -1,9 +1,9 @@
 {
   "active": true,
-  "resource": "CAL OES Engine 2614",
-  "incident": "Bench / Beachcomb Fire",
-  "location": "Oregon",
-  "status": "Demobilizing August 1",
-  "updated": "2026-07-31",
-  "note": "Engine 2614 is scheduled to demobilize August 1 and return to Gilroy following its Oregon wildfire assignment."
+  "resource": "Engine 47 (Type 1) + 1 Line Paramedic",
+  "incident": "Gann Incident",
+  "location": "Calaveras County, California",
+  "status": "Currently Deployed",
+  "updated": "2026-08-05",
+  "note": "Gilroy Fire Department has deployed Engine 47, a Type 1 engine, and one Line Paramedic to support the Gann Incident in Calaveras County. Previously deployed overhead personnel have returned."
 }
